@@ -1,0 +1,8 @@
+{
+  "name": "Kindred - Problem Solving Platform",
+  "description": "A platform for posting real-world challenges and collaborating with global experts to build impactful solutions.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
