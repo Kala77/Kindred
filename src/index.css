@@ -73,6 +73,11 @@
   @apply backdrop-blur-md bg-white/90;
 }
 
+.dot-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 .tonal-layer {
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,249,255,1) 100%);
 }

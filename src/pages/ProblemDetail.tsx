@@ -1,4 +1,4 @@
-import { ArrowLeft, MessageSquare, ThumbsUp, Share2, MoreHorizontal, CheckCircle2, Flag, Send, Users, Target, Info } from 'lucide-react';
+import { ArrowLeft, MessageSquare, ThumbsUp, Share2, MoreHorizontal, CheckCircle2, Flag, Send, Users, Target, Info, MapPin } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
 export default function ProblemDetail() {
@@ -136,20 +136,54 @@ export default function ProblemDetail() {
         </div>
 
         {/* Sidebar Info */}
-        <aside className="lg:col-span-4 flex flex-col gap-8">
+        <aside className="lg:col-span-4 flex flex-col gap-8 sticky top-24">
            {/* Problem Solver Card */}
            <div className="bg-white rounded-[40px] p-8 soft-shadow border border-outline-variant/20 flex flex-col gap-6">
               <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant">Problem Solver</h3>
               <div className="flex items-center gap-4">
-                 <div className="w-16 h-16 rounded-[24px] bg-slate-200 ring-4 ring-surface-container-low"></div>
+                 <div className="w-16 h-16 rounded-[24px] bg-slate-200 ring-4 ring-surface-container-low overflow-hidden">
+                    <img src="https://i.pravatar.cc/150?u=david" className="w-full h-full object-cover" alt="" />
+                 </div>
                  <div>
                     <h4 className="text-xl font-bold font-display text-on-surface">David Chen</h4>
-                    <div className="text-xs font-medium text-on-surface-variant">Civil Engineering hobbyist</div>
+                    <div className="text-xs font-medium text-on-surface-variant">San Francisco, CA</div>
                  </div>
               </div>
-              <button className="w-full py-4 bg-surface-container border border-outline-variant/20 rounded-2xl font-bold text-sm text-on-surface-variant hover:bg-surface-container-high transition-colors">
-                 View Profile
-              </button>
+              <div className="flex gap-2">
+                 <button className="flex-1 py-4 bg-surface-container border border-outline-variant/20 rounded-2xl font-bold text-sm text-on-surface-variant hover:bg-surface-container-high transition-colors">
+                    View Profile
+                 </button>
+                 <button className="p-4 bg-primary-container/10 text-primary-container rounded-2xl border border-primary-container/20">
+                    <MessageSquare size={20} />
+                 </button>
+              </div>
+           </div>
+
+           {/* Funding Progress Card */}
+           <div className="bg-white rounded-[40px] p-8 soft-shadow border border-outline-variant/20 flex flex-col gap-6">
+              <div className="flex justify-between items-center">
+                 <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant">Funding Needed</h3>
+                 <span className="text-xs font-bold text-tertiary-container">$4,200 total</span>
+              </div>
+              
+              <div className="space-y-4">
+                 <div className="flex justify-between items-end">
+                    <div className="text-3xl font-black font-display text-on-surface tracking-tight">$1,450</div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">34% complete</div>
+                 </div>
+                 <div className="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+                    <div className="h-full bg-primary-container-container w-[34%]"></div>
+                 </div>
+              </div>
+
+              <div className="space-y-3">
+                 <button className="w-full py-4 btn-gradient text-on-primary rounded-2xl font-bold font-display text-sm tracking-wide shadow-xl shadow-primary-container/25 active:scale-95 transition-transform">
+                    Back this Project
+                 </button>
+                 <p className="text-[10px] text-center text-on-surface-variant/60 font-medium">
+                    All funds go towards hardware and local permits.
+                 </p>
+              </div>
            </div>
 
            {/* Impact Stats Card */}
@@ -186,6 +220,8 @@ export default function ProblemDetail() {
                     "This problem has been trending in your local area for the past 48 hours."
                  </p>
               </div>
+              
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
            </div>
         </aside>
 
