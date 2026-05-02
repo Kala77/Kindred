@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { 
@@ -13,7 +15,7 @@ import {
   Clock,
   Plus
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const MOCK_PROBLEMS = [
   {
@@ -103,7 +105,7 @@ const CATEGORIES = [
 ];
 
 export default function Feed() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('Home');
   const [activeStatus, setActiveStatus] = useState('Unsolved');
 
@@ -197,7 +199,7 @@ export default function Feed() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              onClick={() => navigate(`/problem/${problem.id}`)}
+              onClick={() => router.push(`/problem/${problem.id}`)}
               className={`bg-white rounded-2xl border border-slate-200 overflow-hidden cursor-pointer hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group ${
                 problem.featured ? 'flex flex-col md:flex-row' : 'flex flex-col'
               }`}
@@ -282,7 +284,7 @@ export default function Feed() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => navigate('/post')}
+        onClick={() => router.push('/post')}
         className="fixed bottom-8 right-8 bg-[#2D62ED] text-white px-6 py-4 rounded-full flex items-center gap-3 shadow-xl shadow-primary/30 hover:bg-[#1A4BCC] transition-colors z-50 font-bold tracking-wide"
       >
         <Plus size={22} strokeWidth={3} />

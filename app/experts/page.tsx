@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from 'motion/react';
 import { BadgeCheck, SlidersHorizontal, MapPin, Star, MessageCircle, User, ShieldCheck, Heart, Clock, Handshake } from 'lucide-react';
 

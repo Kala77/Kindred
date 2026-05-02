@@ -1,5 +1,5 @@
 import { Search, ArrowRight, Heart, MessageCircle, PlusCircle, FileText, Users, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -132,7 +132,7 @@ export default function Home() {
               <h2 className="font-headline-lg text-headline-lg text-on-surface mb-2">Featured Problems</h2>
               <p className="font-body-md text-body-md text-on-surface-variant">High-impact threads in your area that need your voice.</p>
             </div>
-            <Link to="/feed" className="flex items-center gap-2 text-primary font-label-md text-label-md hover:underline decoration-2 underline-offset-4">
+            <Link href="/feed" className="flex items-center gap-2 text-primary font-label-md text-label-md hover:underline decoration-2 underline-offset-4">
               View All Active Problems
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -226,7 +226,7 @@ export default function Home() {
                 Don't wait for someone else to notice. Start a thread today and see how many of your neighbors are ready to help.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/post" className="bg-white text-primary px-10 py-4 rounded-xl font-label-md text-label-md font-bold shadow-lg shadow-black/10 hover:bg-slate-50 active:scale-95 transition-all inline-block">
+                <Link href="/post" className="bg-white text-primary px-10 py-4 rounded-xl font-label-md text-label-md font-bold shadow-lg shadow-black/10 hover:bg-slate-50 active:scale-95 transition-all inline-block">
                   Post a Problem Now
                 </Link>
                 <button className="bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-white/10 active:scale-95 transition-all">

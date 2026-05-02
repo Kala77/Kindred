@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowLeft, MessageSquare, ThumbsUp, Share2, MoreHorizontal, CheckCircle2, Flag, Send, Users, Target, Info, MapPin, Sparkles, Clock, MessageCircle } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 export default function ProblemDetail() {
   const { id } = useParams();
@@ -28,7 +31,7 @@ export default function ProblemDetail() {
         
         {/* Main Content */}
         <div className="lg:col-span-8 flex flex-col gap-8">
-           <Link to="/feed" className="inline-flex items-center gap-2 text-sm font-bold text-on-surface-variant hover:text-primary-container transition-colors mb-2">
+           <Link href="/feed" className="inline-flex items-center gap-2 text-sm font-bold text-on-surface-variant hover:text-primary-container transition-colors mb-2">
               <ArrowLeft size={16} strokeWidth={3} /> Back to feed
            </Link>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from 'motion/react';
 import { Calendar, Download, TrendingUp, CheckCircle2, Users, Heart, Info, Handshake } from 'lucide-react';
 

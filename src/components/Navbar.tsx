@@ -1,9 +1,12 @@
+"use client";
+
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  const location = useLocation();
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -18,16 +21,16 @@ export default function Navbar() {
     <nav className="bg-white border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-[#2D62ED]/5 docked full-width top-0 z-50 sticky">
       <div className="flex justify-between items-center h-16 max-w-[1280px] mx-auto px-6">
         <div className="flex items-center gap-8">
-          <Link to="/" className="text-2xl font-extrabold tracking-tight text-[#2D62ED] font-['Plus_Jakarta_Sans']">
+          <Link href="/" className="text-2xl font-extrabold tracking-tight text-[#2D62ED] font-['Plus_Jakarta_Sans']">
             Kindred
           </Link>
           <div className="hidden md:flex gap-6">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = pathname === link.path;
               return (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className={`font-['Plus_Jakarta_Sans'] text-sm font-medium transition-all duration-200 ${
                     isActive
                       ? 'text-[#2D62ED] border-b-2 border-[#2D62ED] pb-1'
@@ -59,11 +62,11 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-lg pb-4">
           <div className="flex flex-col px-6 pt-4 gap-4">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = pathname === link.path;
               return (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`font-['Plus_Jakarta_Sans'] text-base font-medium py-2 transition-all duration-200 ${
                     isActive

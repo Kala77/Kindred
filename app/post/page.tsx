@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from 'motion/react';
 import { Sparkles, Image as ImageIcon, Camera, Globe, ChevronRight, ChevronLeft, Shield, Users, EyeOff, TreePine, GraduationCap, Heart, Truck, Users2, MoreHorizontal, MapPin, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
