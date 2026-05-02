@@ -1,198 +1,238 @@
 import { motion } from 'motion/react';
-import { Target, TrendingUp, Users, Globe, Clock, CheckCircle2, FileText, ChevronDown, AlertCircle } from 'lucide-react';
+import { Calendar, Download, TrendingUp, CheckCircle2, Users, Heart, Info, Handshake } from 'lucide-react';
 
 export default function Impact() {
-  const stats = [
-    { 
-      label: 'ACTIVE SOLUTIONS', 
-      value: '1,284', 
-      change: '+12% from last month',
-      description: 'Total Problems Solved',
-      icon: CheckCircle2, 
-      color: 'text-primary-container',
-      bg: 'bg-primary-container/10',
-      large: true 
-    },
-    { 
-      label: 'Contributors', 
-      value: '8.4k', 
-      progress: 75,
-      description: '75% of target goal',
-      icon: Users, 
-      color: 'text-tertiary-container',
-      bg: 'bg-tertiary-container/10'
-    },
-    { 
-      label: 'Hours Volunteered', 
-      value: '12,650', 
-      description: 'Top 5% among communities',
-      icon: Clock, 
-      color: 'text-secondary-container',
-      bg: 'bg-secondary-container/10'
-    },
-  ];
-
-  const recentWins = [
-    { title: 'Community Garden Bloom', user: '@green_thumb', time: '2h ago', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAUaD743aXN-T0_2-p4v06S5c26qjO5p3c0D91176Q-o0pQkXl5w7bZgL8_P6aP5k_3qA3gD2tH1E8_zT4b1R4pT2p1hM8pXwX-6_uB8p7oU9r2k8sH7GjH5xL8oP0qH1e1t0D8t7yJ1_oN4yY7b5W2nZ-1oR6yK4xY8hW_0P6_4K7zC3vY_7L-uX3qT7aT3_wG6dM-yL4fJ3e0bA8uA0dI7bN9uV1yX6wN8y' },
-    { title: 'New Bike Lane Advocacy', user: '@cycle_path', time: '5h ago', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJGg4wJbS3yQ5nE0R8kL9sM2wF4rT7pA1yH6lK3nU8hD5tP9gT3kR0jQ7qT4yY2tM6jP4kR7hM9xN1tF2pL7gU0tA4yP8rJ3nR5tK9qN2wM0yJ5zV7qL4wH6wX3pM1tD7wT5tR8gE1wX5nF9tD4kN7vM9sE5tC6wV5hG8tD5qN2tC4tA5yM1zR2xU4wT7bL2wV4_pE7aV9bZ2pE8sF5fN9zW4yL3qQ1tD4wR2' },
-    { title: 'Local Library Revamp', user: '@book_worm', time: '1d ago', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHg8AyVpQ6yE2nT4qM5jP7kH0wT9yR8uC4bN2pA5hM7qX3nR6yL1wT4vJ8kR7wM9yF1uB6sP4zQ3tR5tM9oQ2yJ1vH7yK8zW4wD5jN2qV9yL3pM8sK5zU2uD6xP9tR4tY7zL8xM5wN6sJ1_qH7eD4rC6zY2xQ8hG5uH3tD7fG8sC3tG8sP4_A5rE3wV2bV1wE3hA5gQ9fS5sS1yM1tF6sM3yS8' },
-  ];
-
   return (
-    <div className="bg-background min-h-screen py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8">
+    <div className="bg-[#f8f9ff] text-[#0b1c30] min-h-screen py-12 px-6 font-sans">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12">
         
-        {/* Header */}
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-4">
-          <div className="space-y-2">
-             <h1 className="text-4xl font-extrabold font-display tracking-tight text-on-surface">Community Impact</h1>
-             <p className="text-on-surface-variant font-medium">Transparency in our collective progress across the globe.</p>
-          </div>
-          <div className="flex gap-3">
-             <button className="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-xl text-sm font-bold border border-outline-variant/30">
-                Last 30 Days <ChevronDown size={16} />
-             </button>
-             <button className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl text-sm font-bold border border-outline-variant/30 soft-shadow">
-                <FileText size={16} /> Export Data
-             </button>
-          </div>
-        </header>
-
-        {/* Bento Grid Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-           {/* Large Main Stat */}
-           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="md:col-span-2 bg-white rounded-[32px] p-8 soft-shadow border border-outline-variant/20 relative overflow-hidden flex flex-col justify-between min-h-[240px]"
-           >
-              <div className="space-y-1 relative z-10">
-                 <div className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-on-surface-variant">
-                    {stats[0].label}
-                 </div>
-                 <div className="text-6xl font-black font-display text-on-surface tracking-tighter">{stats[0].value}</div>
-                 <div className="text-sm font-bold text-secondary">{stats[0].change}</div>
-              </div>
-              <div className="text-sm text-on-surface-variant font-medium relative z-10">{stats[0].description}</div>
-              
-              {/* Background Decoration */}
-              <CheckCircle2 className="absolute -right-8 -bottom-8 text-primary-container/5" size={240} strokeWidth={1} />
-           </motion.div>
-
-           <div className="flex flex-col gap-6">
-              {stats.slice(1).map((stat, i) => (
-                <motion.div 
-                  key={stat.label}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-[32px] p-6 soft-shadow border border-outline-variant/20 flex flex-col gap-4"
-                >
-                   <div className="flex justify-between items-start">
-                      <div className="p-3 rounded-2xl bg-surface-container">
-                         <stat.icon className={stat.color} size={24} />
-                      </div>
-                      <div className="text-sm font-black text-on-surface-variant">{stat.label}</div>
-                   </div>
-                   <div className="space-y-1">
-                      <div className="text-2xl font-black font-display tracking-tight leading-none">{stat.value}</div>
-                      {stat.progress && (
-                        <div className="w-full h-1 bg-surface-container rounded-full overflow-hidden">
-                           <div className="h-full bg-tertiary-container" style={{ width: `${stat.progress}%` }}></div>
-                        </div>
-                      )}
-                      <div className="text-xs font-medium text-on-surface-variant">{stat.description}</div>
-                   </div>
-                </motion.div>
-              ))}
-           </div>
-        </div>
-
-        {/* Charts & Activity Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-           <div className="lg:col-span-2 bg-white rounded-[32px] p-8 soft-shadow border border-outline-variant/20">
-              <div className="flex justify-between items-center mb-8">
-                 <h3 className="text-xl font-bold font-display">Success Rate over time</h3>
-                 <div className="flex gap-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant">
-                    <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-primary-container"></div> Completed</span>
-                    <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-primary-container/30"></div> Initiated</span>
-                 </div>
-              </div>
-              
-              {/* Dummy Chart Visualization */}
-              <div className="flex items-end justify-between h-48 gap-4 px-4 overflow-hidden">
-                 {[40, 65, 45, 80, 55, 90].map((h, i) => (
-                   <div key={i} className="flex-1 flex flex-col justify-end gap-1 group">
-                      <div className="w-full bg-primary-container/20 rounded-t-lg transition-all group-hover:bg-primary-container/40" style={{ height: `${h}%` }}></div>
-                      <div className="w-full bg-primary-container rounded-t-lg transition-all" style={{ height: `${h * 0.7}%` }}></div>
-                   </div>
-                 ))}
-              </div>
-              <div className="flex justify-between mt-4 px-4 text-[10px] font-black uppercase tracking-widest text-on-surface-variant">
-                 {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'].map(m => <span key={m}>{m}</span>)}
-              </div>
-
-              <div className="mt-8 p-4 bg-primary-container/5 border border-primary-container/10 rounded-2xl flex items-center gap-3">
-                 <AlertCircle className="text-primary-container" size={20} />
-                 <p className="text-sm font-medium text-on-surface-variant">
-                    <span className="font-bold text-on-surface">May saw a 24% increase</span> in community involvement. Great job!
-                 </p>
-              </div>
-           </div>
-
-           <div className="bg-white rounded-[32px] p-8 soft-shadow border border-outline-variant/20 flex flex-col gap-6">
-              <h3 className="text-xl font-bold font-display">Recent Wins</h3>
-              <div className="flex flex-col gap-4">
-                 {recentWins.map((win, i) => (
-                   <div key={win.title} className="flex items-center gap-4 p-4 rounded-2xl hover:bg-surface-container transition-colors border border-transparent hover:border-outline-variant/10">
-                      <div className="w-10 h-10 rounded-full bg-slate-200 shrink-0 overflow-hidden">
-                         <img src={win.image} className="w-full h-full object-cover" alt="" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                         <div className="text-sm font-bold text-on-surface truncate">{win.title}</div>
-                         <div className="text-[10px] font-medium text-on-surface-variant">{win.user}</div>
-                      </div>
-                      <div className="text-[10px] font-black text-on-surface-variant uppercase tracking-widest">{win.time}</div>
-                   </div>
-                 ))}
-              </div>
-              <button className="mt-auto w-full py-4 border-2 border-outline-variant/30 rounded-2xl font-bold text-sm text-on-surface-variant hover:bg-surface-container-low transition-colors">
-                 See All Wins
+        {/* Hero Section */}
+        <section className="mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-6">
+            <div>
+              <h1 className="text-5xl font-bold font-display mb-2">Community Impact</h1>
+              <p className="text-lg text-[#434655] max-w-2xl">
+                Transparency in our collective progress. See how Kindred members are solving real-world challenges together.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button className="flex items-center gap-2 px-4 py-2 bg-[#e5eeff] rounded-lg text-sm font-semibold text-[#0048ce] hover:bg-[#dce9ff] transition-colors">
+                <Calendar size={20} />
+                Last 30 Days
               </button>
-           </div>
-        </div>
+              <button className="flex items-center gap-2 px-4 py-2 bg-[#e5eeff] rounded-lg text-sm font-semibold text-[#0048ce] hover:bg-[#dce9ff] transition-colors">
+                <Download size={20} />
+                Export Data
+              </button>
+            </div>
+          </div>
+          
+          {/* Bento Grid Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {/* Stat Card 1 */}
+            <div className="md:col-span-2 bg-white p-6 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100 flex flex-col justify-between relative overflow-hidden group">
+              <div className="relative z-10">
+                <span className="text-xs font-semibold text-[#0048ce] uppercase tracking-widest">Active Solutions</span>
+                <h2 className="text-[56px] font-extrabold text-[#0b1c30] mt-2 leading-tight">1,284</h2>
+                <div className="flex items-center gap-2 text-[#00722f] mt-2">
+                  <TrendingUp size={18} />
+                  <span className="text-sm font-semibold">+12% from last month</span>
+                </div>
+              </div>
+              <div className="mt-8 relative z-10">
+                <p className="text-sm text-[#434655]">Total Problems Solved</p>
+              </div>
+              <div className="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                <CheckCircle2 size={160} fill="currentColor" strokeWidth={0.5} className="text-black" />
+              </div>
+            </div>
+            
+            {/* Stat Card 2 */}
+            <div className="bg-white p-6 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100">
+              <div className="bg-[#e5eeff] w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                <Users className="text-[#0048ce]" />
+              </div>
+              <p className="text-sm font-semibold text-[#434655]">Contributors</p>
+              <h3 className="text-[32px] font-bold text-[#0b1c30] font-display">8.4k</h3>
+              <div className="w-full bg-[#eff4ff] h-1.5 rounded-full mt-6">
+                <div className="bg-[#0048ce] h-1.5 rounded-full" style={{ width: '75%' }}></div>
+              </div>
+              <p className="text-xs font-semibold text-[#434655] mt-2">75% of target goal</p>
+            </div>
+            
+            {/* Stat Card 3 */}
+            <div className="bg-white p-6 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100">
+              <div className="bg-[#ffdbca] w-12 h-12 rounded-full flex items-center justify-center mb-6">
+                <Heart className="text-[#8f3c00]" />
+              </div>
+              <p className="text-sm font-semibold text-[#434655]">Hours Volunteered</p>
+              <h3 className="text-[32px] font-bold text-[#0b1c30] font-display">12,650</h3>
+              <p className="text-xs font-semibold text-[#8f3c00] mt-6">Top 5% among communities</p>
+            </div>
+          </div>
+        </section>
 
-        {/* Global Reach Row */}
-        <div className="bg-on-surface text-white rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
-           <div className="flex-1 space-y-6 relative z-10">
-              <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4">
-                 Global Metrics
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Data Visualization: Success Rate */}
+          <div className="lg:col-span-2">
+            <div className="bg-white p-6 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100 h-full">
+              <div className="flex justify-between items-center mb-8">
+                <h3 className="text-2xl font-bold font-display text-[#0b1c30]">Success Rate Over Time</h3>
+                <div className="flex gap-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-[#0048ce]"></div>
+                    <span className="text-xs font-semibold text-[#434655]">Completed</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-[#d3e4fe]"></div>
+                    <span className="text-xs font-semibold text-[#434655]">Initiated</span>
+                  </div>
+                </div>
               </div>
-              <h2 className="text-4xl font-extrabold font-display leading-[1.1] tracking-tighter text-white">Global Reach,<br />Local Impact.</h2>
-              <p className="text-white/60 text-lg leading-relaxed max-w-md">Matching contributors to localized problems in 42 countries and counting.</p>
-              <div className="flex gap-4">
-                 <button className="bg-white text-on-surface px-8 py-4 rounded-2xl font-bold font-display transition-transform active:scale-95">
-                    Impact Map
-                 </button>
-                 <button className="border border-white/20 px-8 py-4 rounded-2xl font-bold font-display hover:bg-white/10 transition-colors">
-                    Our Network
-                 </button>
+              
+              {/* Mock Chart */}
+              <div className="w-full aspect-[16/7] relative flex items-end justify-between px-2 pt-8">
+                <div className="absolute inset-0 flex flex-col justify-between border-b border-slate-100 h-full py-4">
+                  <div className="w-full border-t border-slate-50"></div>
+                  <div className="w-full border-t border-slate-50"></div>
+                  <div className="w-full border-t border-slate-50"></div>
+                  <div className="w-full border-t border-slate-50"></div>
+                </div>
+                <div className="flex items-end gap-6 w-full justify-around h-full z-10 px-4">
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <div className="w-full bg-[#d3e4fe] rounded-t-lg transition-all hover:bg-[#0048ce]/20" style={{ height: '40%' }}></div>
+                    <div className="w-full bg-[#0048ce] rounded-t-lg -mt-8" style={{ height: '30%' }}></div>
+                    <span className="text-xs font-semibold text-[#434655] mt-2">Jan</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <div className="w-full bg-[#d3e4fe] rounded-t-lg" style={{ height: '60%' }}></div>
+                    <div className="w-full bg-[#0048ce] rounded-t-lg -mt-8" style={{ height: '45%' }}></div>
+                    <span className="text-xs font-semibold text-[#434655] mt-2">Feb</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <div className="w-full bg-[#d3e4fe] rounded-t-lg" style={{ height: '55%' }}></div>
+                    <div className="w-full bg-[#0048ce] rounded-t-lg -mt-8" style={{ height: '48%' }}></div>
+                    <span className="text-xs font-semibold text-[#434655] mt-2">Mar</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <div className="w-full bg-[#d3e4fe] rounded-t-lg" style={{ height: '85%' }}></div>
+                    <div className="w-full bg-[#0048ce] rounded-t-lg -mt-8" style={{ height: '72%' }}></div>
+                    <span className="text-xs font-semibold text-[#434655] mt-2">Apr</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 w-full">
+                    <div className="w-full bg-[#d3e4fe] rounded-t-lg" style={{ height: '90%' }}></div>
+                    <div className="w-full bg-[#0048ce] rounded-t-lg -mt-8" style={{ height: '82%' }}></div>
+                    <span className="text-xs font-semibold text-[#434655] mt-2">May</span>
+                  </div>
+                </div>
               </div>
-           </div>
-           
-           <div className="flex-1 relative aspect-video w-full max-w-lg rounded-[32px] overflow-hidden flex items-center justify-center border border-white/10 group cursor-pointer">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4xU1ZpT7yL8nR2sH5jQ9uV4qT8tR1uN4sN3mP7jH2yQ9yX1tR5zR4wM9oQ7yC3_xQ4tH5wM8sQ3tS7yK3wR7pC6vF5zP8qK9oP6tX9xX1uL4wD8sM2sV6yW9vD7yL3xR7zM5wQ1vD9yT1tE8_yT6zG3yV8xA1hC6sE8sC9tA4fT2yT1_wL3uN5zY8bK1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="" />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface to-transparent pointer-events-none"></div>
               
-              {/* Simulated Map Pins */}
-              <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-primary-container animate-ping"></div>
-              <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-primary-container"></div>
+              <div className="mt-8 p-4 bg-[#eff4ff] rounded-lg flex items-center gap-4">
+                <Info className="text-[#0048ce]" fill="currentColor" color="#eff4ff" />
+                <p className="text-sm text-[#434655]">
+                  May saw a <span className="text-[#0048ce] font-semibold">24% increase</span> in total issues resolved compared to the quarterly average.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Recent Wins Feed */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold font-display text-[#0b1c30]">Recent Wins</h3>
+              <a className="text-sm font-semibold text-[#0048ce] hover:underline decoration-2 underline-offset-4" href="#">View All</a>
+            </div>
+            <div className="space-y-4">
+              {/* Win Card 1 */}
+              <div className="bg-white p-4 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100 group cursor-pointer hover:border-[#eff0ff] transition-all">
+                <div className="flex gap-4 items-start">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUaD743OaWJ2TQNoNzbS-hED3T2X0W7gYUKJUsBuwDgGi4tc35a3KpWmmRgnMQOMx7uXrzqA7rrzOYMUdVuOYhrjk9hO_DchRszvyri4Wya5mmNgBtPndnlLbrOeUObjvEazDlhyN3z-v4K2Uyt-vlLW6PfTFBzk_z8oDlvbEstW6phSxynU6I0B9y5oyeFHQHngSe8UcwSkkVQYaTduQ_QRhzWMVG7d8JRV3DLxwfn1h3ICHvpeFgc5h4H_5ixAPOb2FnkTvxn20" className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" alt="" />
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-semibold text-[#006e2c] bg-[#86f898] px-2 py-0.5 rounded-full">Solved</span>
+                      <span className="text-xs font-semibold text-[#434655]">2h ago</span>
+                    </div>
+                    <h4 className="text-sm font-semibold text-[#0b1c30] group-hover:text-[#0048ce] transition-colors">Oak Street Park Lighting Fix</h4>
+                    <p className="text-sm text-[#434655] mt-1 line-clamp-2">The local city council approved the new LED proposal submitted by the community board...</p>
+                  </div>
+                </div>
+              </div>
               
-              <div className="absolute top-1/2 left-2/3 w-4 h-4 rounded-full bg-tertiary-container animate-pulse shadow-[0_0_20px_rgba(181,79,0,0.5)]"></div>
+              {/* Win Card 2 */}
+              <div className="bg-white p-4 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100 group cursor-pointer hover:border-[#eff0ff] transition-all">
+                <div className="flex gap-4 items-start">
+                  <div className="flex -space-x-4">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJGg4wJei6FVCmwpGDsBUHqE1h7dZKl1Bn_XMbXkFP9MrNczivah3cCgFHSPR5V5y8XDMNMSYX_Cnlnxtk2S31BaKfVwmzbyr1K5_NCP03QbcdJnGcxpHhGGF5Bb-zafGmf4G3yWDdPFEe7ZOFNOAET1OInuOD9fOF2fVYzSwSvv1rwg3gZs6CSMKOjuqdNpSLm8WkMLjBg2kwnKCOHkBijN6up-VBBU8ooYBBO55Pc4aSppfmvehMwktQD24VUT9DnwL4t7PuYq0" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" alt="" />
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHg8AyVc6kCJyLgrC4EfcgOFbI4B3JX-G5Ly-ATHeJsx7k6VovHXEqySPN5lr8lAdfjCRbCPX-ZMEErchj742yHXzgxhc--WtqAh7I3t0jHGI1jZ-fAgn6VyJuys8-pq-syU4JYNfZ3jHW_JmLRrJSal69MUzWCHA4VDeCygDWkME3llvIpjFS31QN3cVvYrFChYDsYQkj07aIdY9-rtZVDLzr8TOz7tW5q7C1mNadwPuNx86wAytD7msa_2Dg1BKRtKQK0mjNKr0" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" alt="" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-semibold text-[#8f3c00] bg-[#ffdbca] px-2 py-0.5 rounded-full">Impact Goal</span>
+                      <span className="text-xs font-semibold text-[#434655]">5h ago</span>
+                    </div>
+                    <h4 className="text-sm font-semibold text-[#0b1c30] group-hover:text-[#0048ce] transition-colors">Community Fridge Fully Stocked</h4>
+                    <p className="text-sm text-[#434655] mt-1 line-clamp-2">12 volunteers joined forces to source over 500 lbs of surplus produce for the week...</p>
+                  </div>
+                </div>
+              </div>
               
-              <div className="absolute top-2/3 left-1/4 w-3 h-3 rounded-full bg-secondary-container"></div>
-           </div>
-        </div>
+              {/* Win Card 3 */}
+              <div className="bg-white p-4 rounded-xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] border border-slate-100 group cursor-pointer hover:border-[#eff0ff] transition-all">
+                <div className="flex gap-4 items-start">
+                  <div className="bg-[#2d62ed] w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                    <Handshake className="text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-semibold text-[#006e2c] bg-[#86f898] px-2 py-0.5 rounded-full">Solved</span>
+                      <span className="text-xs font-semibold text-[#434655]">1d ago</span>
+                    </div>
+                    <h4 className="text-sm font-semibold text-[#0b1c30] group-hover:text-[#0048ce] transition-colors">Digital Literacy Workshop Success</h4>
+                    <p className="text-sm text-[#434655] mt-1 line-clamp-2">Successfully onboarded 25 seniors to digital communication tools with 1-on-1 tutoring...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Regional Impact Map */}
+        <section className="mt-12">
+          <div className="bg-[#0b1c30] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+            <div className="relative z-10 md:w-1/2">
+              <h2 className="text-[32px] leading-10 font-bold font-display text-white mb-4">Global Reach, Local Impact</h2>
+              <p className="text-base text-[#d3e4fe] mb-8">
+                Kindred is active in over 120 local communities worldwide. Our model of collective intelligence scales to solve problems of any size.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-[#b5c4ff] text-2xl font-bold font-display">120+</p>
+                  <p className="text-[#d3e4fe] text-xs font-semibold">Cities Reached</p>
+                </div>
+                <div>
+                  <p className="text-[#b5c4ff] text-2xl font-bold font-display">15k</p>
+                  <p className="text-[#d3e4fe] text-xs font-semibold">Active Threads</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="md:w-1/2 relative min-h-[300px] w-full flex items-center justify-center">
+              <img 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4xU1ZxKYXU6H8ukLgdSYYU6f9brfns8PFZFZjEmLZnGT3HrQb_T4W0u5jorbRjDh6tR89Cgvg0YPkI-kty0tOwCQl7wCaPgqs2iGRE4XtoyyATV3YvEt1hyN3g4ougrTRJryhiDoIWTNjvZ-VY44xZbhQX0IdoM1GvNHeXt_21RI08WREHg0pHV9vpv5TqOhYGJo1n668j-_-PlgxTV0DCUxkcydBMqbUWt4tJn5jlUFjMX_oDCOzWBU2Y2AGyYJOOEWSwvMa-c" 
+                className="rounded-2xl opacity-40 mix-blend-screen" 
+                alt="Impact Map" 
+              />
+              {/* Overlay decorative dots */}
+              <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#0048ce] rounded-full animate-pulse shadow-[0_0_15px_rgba(45,98,237,0.8)]"></div>
+              <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-[#6ddd81] rounded-full animate-pulse delay-100 shadow-[0_0_15px_rgba(109,221,129,0.8)]"></div>
+              <div className="absolute bottom-1/4 right-1/2 w-3 h-3 bg-[#0048ce] rounded-full animate-pulse delay-200 shadow-[0_0_15px_rgba(45,98,237,0.8)]"></div>
+            </div>
+            
+            {/* Abstract Background Ornament */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#2d62ed]/10 blur-[100px] rounded-full -mr-48 -mt-48"></div>
+          </div>
+        </section>
+        
       </div>
     </div>
   );

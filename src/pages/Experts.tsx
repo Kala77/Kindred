@@ -1,192 +1,215 @@
 import { motion } from 'motion/react';
-import { Award, Star, Mail, MapPin, Grid, List as ListIcon, Filter, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { BadgeCheck, SlidersHorizontal, MapPin, Star, MessageCircle, User, ShieldCheck, Heart, Clock, Handshake } from 'lucide-react';
 
 const CATEGORIES = [
-  'All Specialists', 'Urban Planners', 'Carpenters', 'Legal Advisors', 'Environmentalists', 'Engineers'
-];
-
-const EXPERTS = [
-  {
-    name: 'David Chen',
-    role: 'Solar Engineer',
-    bio: 'Helping neighborhoods transition to community-owned solar microgrids.',
-    location: 'Oakland, CA',
-    rating: 4.8,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBppGKMQE0XP9UQhBvMAifRYMKf45gt918sO__bqvps-838T518tAzbu-rVHZMvX1FTHe9f4cygk-f8G9R9BvlelunYmmpVp7_7kfzAoOBU65Kv1LinA0uTnip9FUE9HBSBUxICD9juRZpTCM_bNuNC7EXTSGWOO1i_3B8c_bEmNqJN2fdhd-_1A0KkRGNLRpomoYOkfhDEI5JHVqfoiT-sP4mG5Bvi6LOXDEueNdjp-n3verrsYNvuyYmdZbvz2Zf5I64HzDc96Vs',
-  },
-  {
-    name: 'Elena Rodriguez',
-    role: 'Civil Lawyer',
-    bio: 'Specializing in tenant rights and community land trust structures.',
-    location: 'San Francisco, CA',
-    rating: 5.0,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNfEYzvc9aw7ipbyvoFvW9Dfgyb_-0wrXew941juvdQgkF9pSJRn3fdrgHMXSuoHsP65PzNPR-rVuePSa76nqd6-EnVhI2QOnN9cZRVa_n0t_F_1eXtctzErH6USfARu1Kl2Gmq3du77rCYE4p3rNPyV5w7FcJ14do3LB1TImDghGaV3whaqchprdRha0j9v9t6tyIFNY2VcJZsLixpPIrW_PBIS-AursTlZgtfhrfHwr0SjZTgDJucq1xNugGVBVIIKcHQ01g63A',
-  },
-  {
-    name: 'Sarah Jenkins',
-    role: 'Horticulturist',
-    bio: 'Urban gardening consultant for drought-resistant public spaces.',
-    location: 'San Jose, CA',
-    rating: 4.9,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAyCdm72nJFHQXmqg2kKG9zhzbWckzX9grAbgGFTiq-EG73oQ0S_z5J2irLBEtD68pnxRMlwsVB0yLZ95J8C9n_YThhC0ReYsroUKU0PenYTVqFFyYamr18MG5DZByQEQVRfjbOmqIrJ09uAVhnva03cOXVpKNkDJC4ioKEJuNU3cN6i0_y9xR3Hk9owHlr-kiLPjSBQ6ps18DIbOcDoWQNfnahACsDc4nvzJhMx9WdG0RPGvBNgqByGSRcyHm6_widksnwCgf1xSA',
-  },
-  {
-    name: 'Thomas Builder',
-    role: 'Master Carpenter',
-    bio: 'Guiding communities in building accessible park infrastructure.',
-    location: 'Berkeley, CA',
-    rating: 4.9,
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAkcKHcJisW-vU2utnVVM1nVA6r-xCdA2IRKCfztFEjq5dBNkJ2jjbcglUrSZEMth8OQ3c00DaCRxv971CT_WRbQhqZYStx-qie3L5L0yL-Sp-cTGEk-GmD7FSi4tM1fCNHK4AM18r-w0MyVlG-sLQiRKUwzpRGP4xkgrgyoIkkGSzeX6pmA845mN86S8ZLWXfNQO98nuZuBJDe2WRiqpufwz1c3lJePWZdSxkySjrS90_znsmlqkdurqFd05-Y3eabKBAdQrLW2pc',
-  },
+  'All Specialists', 'Urban Planners', 'Carpenters', 'Legal Advisors', 'Civil Engineers', 'Environmentalists', 'Social Workers'
 ];
 
 export default function Experts() {
   return (
-    <div className="bg-background min-h-screen py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col gap-10">
+    <div className="bg-[#f8f9ff] text-[#0b1c30] min-h-screen py-12 px-6 font-sans">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12">
         
         {/* Header Section */}
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div className="space-y-4 max-w-2xl">
-             <h1 className="text-5xl font-extrabold font-display tracking-tight text-on-surface">Verified Local Talent</h1>
-             <p className="text-on-surface-variant font-medium leading-relaxed">
-                Find expert neighbors ready to help. Kindred connects you with verified 
-                professionals and experienced hobbyists in your area.
-             </p>
-             <div className="flex gap-3">
-                <button className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-2xl text-sm font-bold border border-outline-variant/30 soft-shadow">
-                   <Filter size={18} /> Filters
-                </button>
-                <button className="flex items-center gap-2 px-5 py-2.5 bg-surface-container rounded-2xl text-sm font-bold border border-outline-variant/30">
-                   <MapPin size={18} /> San Francisco, CA <ChevronDown size={16} />
-                </button>
-             </div>
+        <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#e5eeff] text-[#0048ce] text-xs font-semibold mb-4">
+              <BadgeCheck size={14} className="mr-1" />
+              Verified Local Talent
+            </span>
+            <h1 className="text-5xl font-bold font-display tracking-tight mb-4">Find expert neighbors for every challenge.</h1>
+            <p className="text-lg text-[#434655]">
+              Kindred connects you with skilled professionals in your community who volunteer their time to solve collective problems.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <button className="flex items-center gap-2 bg-white border border-[#c3c5d7] px-4 py-2.5 rounded-xl hover:bg-[#eff4ff] transition-colors shadow-sm text-sm font-semibold text-[#0b1c30]">
+              <SlidersHorizontal size={18} className="text-[#737686]" />
+              Filters
+            </button>
+            <button className="flex items-center gap-2 bg-white border border-[#c3c5d7] px-4 py-2.5 rounded-xl hover:bg-[#eff4ff] transition-colors shadow-sm text-sm font-semibold text-[#0b1c30]">
+              <MapPin size={18} className="text-[#737686]" />
+              San Francisco, CA
+            </button>
           </div>
         </header>
 
-        {/* Categories */}
-        <div className="flex overflow-x-auto gap-3 pb-2 no-scrollbar">
-           {CATEGORIES.map((cat, i) => (
-             <button 
-              key={cat} 
-              className={`whitespace-nowrap px-6 py-3 rounded-full text-sm font-bold border transition-all ${
-                i === 0 ? 'bg-primary-container text-on-primary border-primary-container' : 'bg-white text-on-surface-variant border-outline-variant/30 hover:bg-surface-container-low'
+        {/* Categories Pills */}
+        <div className="flex flex-wrap gap-2">
+          {CATEGORIES.map((cat, i) => (
+            <button 
+              key={cat}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+                i === 0 
+                  ? 'bg-[#0048ce] text-white shadow-lg shadow-[#0048ce]/20' 
+                  : 'bg-white border border-[#c3c5d7] text-[#434655] hover:border-[#0048ce] hover:text-[#0048ce]'
               }`}
-             >
-               {cat}
-             </button>
-           ))}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-           
-           {/* Featured Expert */}
-           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-8 bg-white rounded-[40px] p-8 md:p-12 soft-shadow border border-outline-variant/20 flex flex-col md:flex-row gap-8 group"
-           >
-              <div className="w-full md:w-64 h-64 shrink-0 rounded-3xl overflow-hidden relative">
-                 <img 
+        {/* Expert Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          
+          {/* Expert Card 1 (Large Focus) */}
+          <div className="md:col-span-7 bg-white border border-slate-100 rounded-3xl p-6 shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex flex-col justify-between group">
+            <div className="flex items-start justify-between">
+              <div className="flex gap-4">
+                <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPK5wJbS9wHCq-VSaHyvw_UaOQ3zWHII3TIG89e94KCsv3nnQ6hHhPnvKyKKCs8mrUVkm9QVZuILWqWRvmD6_1x-QfuHEjJ_j58WMlNLQ1RkYfMlaT0_txMAVbfFDJIHURLRSf3SYBSRU0za9ye9Y1MSLLJuHptgEXoy_wk6XDUimhYoYATt2CsyFTe_urSytwuiqGkMLQbfc7kkT4_iJxibiUDic7Fqc5T9QreKFFaNG77sYRA9M_O0UWjhvQQ2ZdKuc6Bmi4tqQ" 
-                  className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-700" 
+                  className="w-20 h-20 rounded-full object-cover border-4 border-[#e5eeff]" 
                   alt="" 
-                 />
-                 <div className="absolute top-4 left-4 bg-primary-container text-on-primary p-2 rounded-xl shadow-lg">
-                    <CheckCircle2 size={24} />
-                 </div>
+                />
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-2xl font-bold font-display text-[#0b1c30]">Marcus Thorne</h3>
+                    <BadgeCheck size={20} className="text-[#0048ce]" fill="#0048ce" color="white" />
+                  </div>
+                  <p className="text-[#0048ce] text-sm font-semibold">Senior Urban Planner • 12 years exp.</p>
+                  <div className="flex items-center gap-1 mt-2">
+                    <Star size={14} className="text-[#8f3c00]" fill="#8f3c00" />
+                    <span className="text-xs font-semibold text-[#434655]">4.9 (42 consultations)</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col gap-4">
-                 <div className="flex justify-between items-start">
-                    <div>
-                       <h2 className="text-3xl font-black font-display text-on-surface">Marcus Thorne</h2>
-                       <div className="text-primary-container font-black text-xs uppercase tracking-widest mt-1">Senior Urban Planner</div>
-                    </div>
-                    <div className="flex items-center gap-1 text-tertiary-container font-black text-lg bg-tertiary-container/10 px-3 py-1 rounded-xl">
-                       <Star size={18} fill="currentColor" /> 4.9
-                    </div>
-                 </div>
-                 <p className="text-on-surface-variant leading-relaxed font-medium">
-                    "12 years experience in municipal zoning and sustainable city growth. 
-                    I've helped 40+ community groups navigate complex public policy to 
-                    get their local initiatives approved."
-                 </p>
-                 <div className="flex flex-wrap gap-2 mt-2">
-                    {['Zoning Laws', 'Urban Design', 'Public Policy'].map(tag => (
-                      <span key={tag} className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant/20">
-                         {tag}
-                      </span>
-                    ))}
-                 </div>
-                 <button className="btn-gradient text-on-primary px-8 py-4 rounded-2xl font-bold font-display text-sm tracking-wide mt-4 self-start shadow-xl shadow-primary-container/25 active:scale-95 transition-transform">
-                    Ask for Advice
-                 </button>
-              </div>
-           </motion.div>
-
-           {/* Metrics Sidebar */}
-           <div className="lg:col-span-4 bg-tertiary-fixed text-on-tertiary-container rounded-[40px] p-8 flex flex-col justify-center items-center text-center gap-4 relative overflow-hidden">
-              <div className="relative z-10 space-y-2">
-                 <div className="text-5xl font-black font-display tracking-tighter">1,240+</div>
-                 <div className="text-sm font-black uppercase tracking-widest opacity-70 leading-tight">Problems solved<br />by local experts</div>
-              </div>
-              <p className="text-sm font-medium text-on-tertiary-container/80 relative z-10 mt-4 leading-relaxed">
-                 Experts have contributed over 4,000 hours of free advice this year alone.
+              <span className="bg-[#86f898] text-[#00722f] px-3 py-1 rounded-full text-xs font-semibold">Active Now</span>
+            </div>
+            
+            <div className="my-6">
+              <p className="text-base text-[#434655] leading-relaxed line-clamp-3">
+                Passionate about transforming underutilized urban spaces into thriving community hubs. I can help with zoning inquiries, public space design, and navigating city permit processes for community gardens or parklets.
               </p>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
-           </div>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {['Zoning Laws', 'Urban Design', 'Public Policy'].map(tag => (
+                  <span key={tag} className="px-3 py-1 rounded-lg bg-[#e5eeff] text-[#434655] text-xs font-semibold">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex gap-3">
+              <button className="flex-1 bg-[#0048ce] text-white py-3 px-6 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+                <MessageCircle size={18} />
+                Ask for Advice
+              </button>
+              <button className="bg-[#e5eeff] text-[#434655] py-3 px-4 rounded-xl hover:bg-[#dce9ff] transition-colors">
+                <User size={20} />
+              </button>
+            </div>
+          </div>
+
+          {/* Stats Card (Small) */}
+          <div className="md:col-span-5 bg-[#0048ce] text-white rounded-3xl p-6 flex flex-col justify-center relative overflow-hidden">
+            <div className="relative z-10">
+              <h4 className="text-[32px] leading-10 font-bold tracking-tight mb-2 font-display">1,240+</h4>
+              <p className="text-base opacity-90 mb-6">Problems solved by neighbors this month alone. Join the collective intelligence movement.</p>
+              <div className="flex -space-x-4">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7vgEDX3OZW1nPdt9RG_PXIoelMzWquc01ScrCkRM7bT6H3DxQGa8a1AV64OOZHNw0ogmOFBkVzItPwNCuu1IW0doXo-v-McAxn0UPWKH7PutjtkNn8wlFO1DsJTTWAlVYK25GFGToKYlB3jUjQGrY0-7MTr76NqqTCzSsQT1zJE5EkIzGjB30tNypMj4hbDLXbBZx9hF-i33vvmifa2IUcsoj3U1TXaPhNymFpy5-HYjqKXQIaUXFs2abh4E0f33xktHuE0FpGk" className="w-10 h-10 rounded-full border-2 border-[#0048ce]" alt="" />
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBppGKMQE0XP9UQhBvMAifRYMKf45gt918sO__bqvps-838T518tAzbu-rVHZMvX1FTHe9f4cygk-f8G9R9BvlelunYmmpVp7_7kfzAoOBU65Kv1LinA0uTnip9FUE9HBSBUxICD9juRZpTCM_bNuNC7EXTSGWOO1i_3B8c_bEmNqJN2fdhd-_1A0KkRGNLRpomoYOkfhDEI5JHVqfoiT-sP4mG5Bvi6LOXDEueNdjp-n3verrsYNvuyYmdZbvz2Zf5I64HzDc96Vs" className="w-10 h-10 rounded-full border-2 border-[#0048ce]" alt="" />
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuByoVwrm7NPPFHnGvtBATZ9K8DibhDh6usvUqane68pyPNQHPz9HvmB-NoljNalzO-FhzVylet7lbhbCCjKUg1n9drGxTYO0O9n72-Yw8Xj9nKfGuQJpc709d-Z-0q0ruUdyDoEbpMwjoOHcb-ukZSW5JySiHoqAf7CU89ClbveGHlaS-RN1uIzZqRVfOWoVBZo78nT49Fy90_ccgUOD8tgKEEBlUMhnMxRw0JAMXIswX3qShevdS7KA3Kg_nUMNMlvjNaAzWw1e0s" className="w-10 h-10 rounded-full border-2 border-[#0048ce]" alt="" />
+                <div className="w-10 h-10 rounded-full border-2 border-[#0048ce] bg-[#eff0ff] text-[#0048ce] flex items-center justify-center text-xs font-bold">+12</div>
+              </div>
+            </div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+          </div>
+
+          {/* Expert Card 2 (Standard) */}
+          <div className="md:col-span-4 bg-white border border-slate-100 rounded-3xl p-4 shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex flex-col h-full group hover:-translate-y-1 transition-all">
+            <div className="flex items-center gap-4 mb-4">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkcKHcJisW-vU2utnVVM1nVA6r-xCdA2IRKCfztFEjq5dBNkJ2jjbcglUrSZEMth8OQ3c00DaCRxv971CT_WRbQhqZYStx-qie3L5L0yL-Sp-cTGEk-GmD7FSi4tM1fCNHK4AM18r-w0MyVlG-sLQiRKUwzpRGP4xkgrgyoIkkGSzeX6pmA845mN86S8ZLWXfNQO98nuZuBJDe2WRiqpufwz1c3lJePWZdSxkySjrS90_znsmlqkdurqFd05-Y3eabKBAdQrLW2pc" className="w-16 h-16 rounded-2xl object-cover" alt="" />
+              <div>
+                <h3 className="text-sm font-semibold text-[#0b1c30]">David Chen</h3>
+                <p className="text-[#434655] text-sm">Master Carpenter</p>
+                <div className="flex items-center gap-1">
+                  <MapPin size={14} className="text-[#006e2c]" />
+                  <span className="text-xs text-[#737686]">2.4 miles away</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex-grow">
+              <p className="text-sm text-[#434655] line-clamp-2">Expert in structural repair and sustainable wood sourcing. Can advise on patio builds and structural safety.</p>
+            </div>
+            <button className="mt-4 w-full border border-[#0048ce] text-[#0048ce] py-2.5 rounded-xl text-sm font-semibold hover:bg-[#0048ce]/5 transition-colors">Ask for Advice</button>
+          </div>
+
+          {/* Expert Card 3 (Standard) */}
+          <div className="md:col-span-4 bg-white border border-slate-100 rounded-3xl p-4 shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex flex-col h-full group hover:-translate-y-1 transition-all">
+            <div className="flex items-center gap-4 mb-4">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNfEYzvc9aw7ipbyvoFvW9Dfgyb_-0wrXew941juvdQgkF9pSJRn3fdrgHMXSuoHsP65PzNPR-rVuePSa76nqd6-EnVhI2QOnN9cZRVa_n0t_F_1eXtctzErH6USfARu1Kl2Gmq3du77rCYE4p3rNPyV5w7FcJ14do3LB1TImDghGaV3whaqchprdRha0j9v9t6tyIFNY2VcJZsLixpPIrW_PBIS-AursTlZgtfhrfHwr0SjZTgDJucq1xNugGVBVIIKcHQ01g63A" className="w-16 h-16 rounded-2xl object-cover" alt="" />
+              <div>
+                <h3 className="text-sm font-semibold text-[#0b1c30]">Elena Rodriguez</h3>
+                <p className="text-[#434655] text-sm">Environmental Law</p>
+                <div className="flex items-center gap-1">
+                  <MapPin size={14} className="text-[#006e2c]" />
+                  <span className="text-xs text-[#737686]">1.1 miles away</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex-grow">
+              <p className="text-sm text-[#434655] line-clamp-2">Helps communities understand water rights and local environmental compliance for urban farming initiatives.</p>
+            </div>
+            <button className="mt-4 w-full border border-[#0048ce] text-[#0048ce] py-2.5 rounded-xl text-sm font-semibold hover:bg-[#0048ce]/5 transition-colors">Ask for Advice</button>
+          </div>
+
+          {/* Expert Card 4 (Standard) */}
+          <div className="md:col-span-4 bg-white border border-slate-100 rounded-3xl p-4 shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex flex-col h-full group hover:-translate-y-1 transition-all">
+            <div className="flex items-center gap-4 mb-4">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyCdm72nJFHQXmqg2kKG9zhzbWckzX9grAbgGFTiq-EG73oQ0S_z5J2irLBEtD68pnxRMlwsVB0yLZ95J8C9n_YThhC0ReYsroUKU0PenYTVqFFyYamr18MG5DZByQEQVRfjbOmqIrJ09uAVhnva03cOXVpKNkDJC4ioKEJuNU3cN6i0_y9xR3Hk9owHlr-kiLPjSBQ6ps18DIbOcDoWQNfnahACsDc4nvzJhMx9WdG0RPGvBNgqByGSRcyHm6_widksnwCgf1xSA" className="w-16 h-16 rounded-2xl object-cover" alt="" />
+              <div>
+                <h3 className="text-sm font-semibold text-[#0b1c30]">Sarah Jenkins</h3>
+                <p className="text-[#434655] text-sm">Social Worker</p>
+                <div className="flex items-center gap-1">
+                  <MapPin size={14} className="text-[#006e2c]" />
+                  <span className="text-xs text-[#737686]">0.8 miles away</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex-grow">
+              <p className="text-sm text-[#434655] line-clamp-2">Specializing in community mental health resources and youth program development. Available for local workshop planning.</p>
+            </div>
+            <button className="mt-4 w-full border border-[#0048ce] text-[#0048ce] py-2.5 rounded-xl text-sm font-semibold hover:bg-[#0048ce]/5 transition-colors">Ask for Advice</button>
+          </div>
+          
         </div>
 
-        {/* Regular Expert Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-           {EXPERTS.map((expert, i) => (
-             <motion.div 
-              key={expert.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-[32px] p-8 soft-shadow border border-outline-variant/20 flex flex-col gap-6 hover:border-primary-container/30 transition-all group"
-             >
-                <div className="flex justify-between items-start">
-                   <img src={expert.image} className="w-20 h-20 rounded-2xl object-cover ring-4 ring-surface-container" alt="" />
-                   <div className="flex items-center gap-1 text-tertiary-container font-black bg-tertiary-container/5 px-2 py-1 rounded-lg">
-                      <Star size={14} fill="currentColor" /> {expert.rating}
-                   </div>
-                </div>
-                <div className="space-y-1">
-                   <h3 className="text-xl font-bold font-display group-hover:text-primary-container transition-colors">{expert.name}</h3>
-                   <div className="text-xs font-black uppercase tracking-widest text-primary-container">{expert.role}</div>
-                </div>
-                <p className="text-sm text-on-surface-variant font-medium leading-relaxed italic line-clamp-2">
-                   "{expert.bio}"
-                </p>
-                <div className="flex items-center gap-2 pt-4 border-t border-outline-variant/10 mt-auto">
-                   <MapPin size={14} className="text-on-surface-variant" />
-                   <span className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">{expert.location}</span>
-                   <button className="ml-auto p-2 hover:bg-surface-container rounded-lg transition-colors">
-                      <Mail size={18} className="text-on-surface-variant group-hover:text-primary-container" />
-                   </button>
-                </div>
-             </motion.div>
-           ))}
-        </div>
-
-        {/* Apply Banner */}
-        <section className="bg-surface-container-highest rounded-[40px] px-8 py-12 md:p-16 flex flex-col md:flex-row justify-between items-center gap-8 border border-outline-variant/30">
-           <div className="space-y-3 text-center md:text-left">
-              <h2 className="text-3xl font-extrabold font-display tracking-tight text-on-surface">Got skills to share?</h2>
-              <p className="text-on-surface-variant font-medium">Join our roster of verified experts and help your community grow.</p>
-           </div>
-           <div className="flex gap-4">
-              <button className="btn-gradient text-on-primary px-8 py-4 rounded-2xl font-bold font-display text-sm tracking-wide shadow-lg active:scale-95 transition-transform">
-                 Apply as an Expert
-              </button>
-              <button className="bg-white text-on-surface px-8 py-4 rounded-2xl font-bold font-display text-sm tracking-wide border border-outline-variant/30 soft-shadow hover:bg-surface-container-low transition-colors">
-                 Learn More
-              </button>
-           </div>
+        {/* Become an Expert Section */}
+        <section className="mt-12 bg-[#e5eeff] rounded-[40px] p-8 flex flex-col md:flex-row items-center gap-8">
+          <div className="md:w-1/2">
+            <h2 className="text-[32px] leading-10 font-bold tracking-tight text-[#0b1c30] mb-4 font-display">Got skills to share?</h2>
+            <p className="text-base text-[#434655] mb-8">Join our network of local experts and help your neighborhood solve problems more effectively. You decide how much time you give.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-[#0048ce] text-white py-3 px-8 rounded-xl text-sm font-semibold hover:shadow-lg transition-shadow">Apply as an Expert</button>
+              <button className="bg-white border border-[#c3c5d7] py-3 px-8 rounded-xl text-sm font-semibold text-[#434655] hover:bg-[#f8f9ff] transition-colors">Learn More</button>
+            </div>
+          </div>
+          
+          <div className="md:w-1/2 grid grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <div className="bg-white p-4 rounded-2xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex items-center gap-3">
+                <ShieldCheck size={24} className="text-[#006e2c]" fill="#006e2c" color="white" />
+                <span className="text-xs font-semibold">Secure Identity</span>
+              </div>
+              <div className="bg-white p-4 rounded-2xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex items-center gap-3">
+                <Heart size={24} className="text-[#8f3c00]" fill="#8f3c00" color="white" />
+                <span className="text-xs font-semibold">Community Impact</span>
+              </div>
+            </div>
+            <div className="pt-8 space-y-4">
+              <div className="bg-white p-4 rounded-2xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex items-center gap-3">
+                <Clock size={24} className="text-[#0048ce]" fill="#0048ce" color="white" />
+                <span className="text-xs font-semibold">Your Schedule</span>
+              </div>
+              <div className="bg-white p-4 rounded-2xl shadow-[0_4px_20px_-2px_rgba(45,98,237,0.08)] flex items-center gap-3">
+                <Handshake size={24} className="text-[#006e2c]" fill="#006e2c" color="white" />
+                <span className="text-xs font-semibold">Networking</span>
+              </div>
+            </div>
+          </div>
         </section>
+        
       </div>
     </div>
   );

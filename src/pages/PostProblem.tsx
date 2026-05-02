@@ -29,7 +29,7 @@ export default function PostProblem() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         {/* Left Information Sidebar */}
-        <aside className="lg:col-span-4 space-y-12 sticky top-24 self-start">
+        <aside className="lg:col-span-4 space-y-8 lg:space-y-12 lg:sticky lg:top-24 lg:self-start mb-8 lg:mb-0">
           <div className="space-y-6">
              <div className="w-16 h-16 rounded-[24px] bg-primary-container/10 flex items-center justify-center text-primary-container shadow-sm border border-primary-container/20">
                 <Sparkles size={32} />
@@ -147,10 +147,10 @@ export default function PostProblem() {
                            </div>
                            <div className="btn-gradient text-on-primary px-8 py-3 rounded-xl font-bold font-display text-xs shadow-lg mt-4">Browse Local Files</div>
                         </div>
-                        <div className="grid grid-cols-3 gap-4 mt-4">
-                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPCfFsZpDkQzIq3vA4Jv8jL7eO5rBq9pE2zC3bV5cO4lZ2wK1oA5mX2nG9iF8qL1uA7wS0dJ5kM4fS8aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Aerial view community garden" />
-                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU35j0rD7tP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Collaborative workspace" />
-                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9RLuKyN7mQ6lE9uA2Jw7sD3vP8kG5pC8zX9mQ4dK1rM6oW2yB1uF7wX6nT4yD2kE8fS0aL6hM4fS8aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Town hall" />
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPCfFsZpDkQzIq3vA4Jv8jL7eO5rBq9pE2zC3bV5cO4lZ2wK1oA5mX2nG9iF8qL1uA7wS0dJ5kM4fS8aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-32 sm:h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Aerial view community garden" />
+                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU35j0rD7tP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-32 sm:h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Collaborative workspace" />
+                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9RLuKyN7mQ6lE9uA2Jw7sD3vP8kG5pC8zX9mQ4dK1rM6oW2yB1uF7wX6nT4yD2kE8fS0aL6hM4fS8aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-32 sm:h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Town hall" />
                         </div>
                      </div>
                      <div className="space-y-4">
@@ -210,21 +210,21 @@ export default function PostProblem() {
            </div>
 
            {/* Footer Buttons */}
-           <div className="p-8 md:p-12 border-t border-outline-variant/10 flex justify-between items-center bg-surface-container-lowest">
+           <div className="p-6 md:p-12 border-t border-outline-variant/10 flex flex-col sm:flex-row justify-between items-center gap-4 bg-surface-container-lowest">
               <button 
                 onClick={prevStep}
                 disabled={step === 1}
-                className={`flex items-center gap-2 text-sm font-bold transition-all ${step === 1 ? 'opacity-0' : 'text-on-surface-variant hover:text-on-surface'}`}
+                className={`flex items-center justify-center gap-2 text-sm font-bold transition-all w-full sm:w-auto py-3 sm:py-0 ${step === 1 ? 'opacity-0 hidden sm:flex' : 'text-on-surface-variant hover:text-on-surface'}`}
               >
                  <ChevronLeft size={20} /> Previous
               </button>
-              <div className="flex gap-4">
-                 <button className="text-sm font-bold text-on-surface-variant hover:text-on-surface transition-colors px-6">
+              <div className="flex flex-col-reverse sm:flex-row gap-4 w-full sm:w-auto">
+                 <button className="text-sm font-bold text-on-surface-variant hover:text-on-surface transition-colors py-3 sm:py-0 px-6 w-full sm:w-auto text-center">
                     Save Draft
                  </button>
                  <button 
                    onClick={nextStep}
-                   className="btn-gradient text-on-primary px-10 py-5 rounded-2xl font-bold font-display text-base flex items-center gap-2 active:scale-95 transition-all shadow-xl shadow-primary-container/30"
+                   className="btn-gradient text-on-primary px-10 py-4 sm:py-5 rounded-2xl font-bold font-display text-base flex items-center justify-center gap-2 active:scale-95 transition-all shadow-xl shadow-primary-container/30 w-full sm:w-auto"
                  >
                     {step === 3 ? 'Review Post' : step === 4 ? 'Submit Problem' : 'Continue'} <ChevronRight size={20} strokeWidth={2.5} />
                  </button>
