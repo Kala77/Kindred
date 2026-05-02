@@ -1,4 +1,4 @@
-import { ArrowLeft, MessageSquare, ThumbsUp, Share2, MoreHorizontal, CheckCircle2, Flag, Send, Users, Target, Info, MapPin } from 'lucide-react';
+import { ArrowLeft, MessageSquare, ThumbsUp, Share2, MoreHorizontal, CheckCircle2, Flag, Send, Users, Target, Info, MapPin, Sparkles, Clock, MessageCircle } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
 export default function ProblemDetail() {
@@ -95,35 +95,71 @@ export default function ProblemDetail() {
                  </div>
 
                  {/* Individual Solutions */}
-                 <div className="space-y-6 pt-6">
+                 <div className="space-y-12 pt-6">
                     <div className="flex justify-between items-center">
-                       <h3 className="font-bold font-display text-xl text-on-surface">Community Solutions (12)</h3>
+                       <h2 className="text-2xl font-bold font-display text-on-surface">Community Intelligence (12)</h2>
+                    </div>
+
+                    {/* Proof of Work Milestones */}
+                    <div className="space-y-6">
+                       <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant flex items-center gap-2">
+                          <CheckCircle2 size={16} className="text-primary-container" /> Project Milestones
+                       </h3>
+                       <div className="flex flex-col gap-4">
+                          {[
+                            { label: 'Problem Validated by 50+ Residents', status: 'Completed', date: 'Oct 12' },
+                            { label: 'Technical Feasibility Study', status: 'Completed', date: 'Oct 14' },
+                            { label: 'Budget Approval', status: 'In Progress', date: 'Exp. Oct 20' },
+                          ].map((m, i) => (
+                            <div key={i} className="flex items-center justify-between p-4 bg-surface-container rounded-2xl border border-outline-variant/10">
+                               <div className="flex items-center gap-4">
+                                  <div className={`w-6 h-6 rounded-full flex items-center justify-center ${m.status === 'Completed' ? 'bg-primary-container text-white' : 'bg-white text-on-surface-variant border border-outline-variant'}`}>
+                                     {m.status === 'Completed' ? <CheckCircle2 size={14} /> : <div className="w-2 h-2 rounded-full bg-surface-container-highest animate-pulse" />}
+                                  </div>
+                                  <span className="text-sm font-bold text-on-surface">{m.label}</span>
+                               </div>
+                               <span className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">{m.date}</span>
+                            </div>
+                          ))}
+                       </div>
                     </div>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                        {solutions.map((sol, i) => (
-                         <div key={i} className="bg-surface-container-lowest border border-outline-variant/20 rounded-[32px] p-8 soft-shadow relative overflow-hidden group">
+                         <div key={i} className="bg-white border border-outline-variant/20 rounded-[40px] p-8 soft-shadow relative overflow-hidden group hover:border-primary-container/30 transition-all">
                             {sol.mostHelpful && (
                               <div className="absolute top-0 right-0 bg-secondary-container text-on-secondary-container px-6 py-2 rounded-bl-3xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
-                                 <CheckCircle2 size={14} /> Most Helpful
+                                 <Sparkles size={14} /> Top Rated Solution
                               </div>
                             )}
                             <div className="flex gap-4 items-start mb-6">
-                               <div className="w-12 h-12 rounded-2xl bg-slate-200"></div>
+                               <div className="w-12 h-12 rounded-2xl bg-slate-200 overflow-hidden border-2 border-surface-container shadow-sm">
+                                  <img src={`https://i.pravatar.cc/100?u=${sol.author}`} alt="" />
+                               </div>
                                <div>
-                                  <div className="font-bold text-on-surface">{sol.author}</div>
+                                  <div className="font-bold text-on-surface flex items-center gap-1">
+                                     {sol.author} 
+                                     <CheckCircle2 size={14} className="text-blue-500" />
+                                  </div>
                                   <div className="text-[10px] font-black uppercase tracking-widest text-primary-container">{sol.role}</div>
                                </div>
-                               <div className="ml-auto text-[10px] font-black uppercase tracking-widest text-on-surface-variant">{sol.time}</div>
+                               <div className="ml-auto text-[10px] font-black uppercase tracking-widest text-on-surface-variant flex items-center gap-1">
+                                  <Clock size={12} /> {sol.time}
+                               </div>
                             </div>
-                            <p className="text-on-surface-variant leading-relaxed font-medium mb-6">
+                            <p className="text-on-surface-variant leading-relaxed font-medium mb-8 text-base">
                                {sol.content}
                             </p>
-                            <div className="flex items-center gap-4">
-                               <button className="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-xl text-xs font-black text-on-surface hover:bg-primary-container/20 transition-colors">
-                                  <ThumbsUp size={16} /> Helpful ({sol.votes})
-                               </button>
-                               <button className="p-2 text-on-surface-variant hover:text-on-surface transition-colors">
+                            <div className="flex items-center justify-between">
+                               <div className="flex items-center gap-3">
+                                  <button className="flex items-center gap-2 bg-surface-container-high px-5 py-2.5 rounded-2xl text-xs font-black text-on-surface hover:bg-primary-container hover:text-on-primary transition-all active:scale-95">
+                                     <ThumbsUp size={16} /> Helpful • {sol.votes}
+                                  </button>
+                                  <button className="flex items-center gap-2 text-xs font-black text-on-surface-variant hover:text-on-surface transition-colors px-4 py-2">
+                                     <MessageCircle size={16} /> 4 Replies
+                                  </button>
+                               </div>
+                               <button className="p-3 text-on-surface-variant hover:bg-surface-container rounded-2xl transition-colors">
                                   <MoreHorizontal size={20} />
                                </button>
                             </div>
@@ -139,7 +175,7 @@ export default function ProblemDetail() {
         <aside className="lg:col-span-4 flex flex-col gap-8 sticky top-24">
            {/* Problem Solver Card */}
            <div className="bg-white rounded-[40px] p-8 soft-shadow border border-outline-variant/20 flex flex-col gap-6">
-              <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant">Problem Solver</h3>
+              <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant">Lead Solver</h3>
               <div className="flex items-center gap-4">
                  <div className="w-16 h-16 rounded-[24px] bg-slate-200 ring-4 ring-surface-container-low overflow-hidden">
                     <img src="https://i.pravatar.cc/150?u=david" className="w-full h-full object-cover" alt="" />
@@ -156,6 +192,29 @@ export default function ProblemDetail() {
                  <button className="p-4 bg-primary-container/10 text-primary-container rounded-2xl border border-primary-container/20">
                     <MessageSquare size={20} />
                  </button>
+              </div>
+           </div>
+
+           {/* Collaborator Leaderboard */}
+           <div className="bg-white rounded-[40px] p-8 soft-shadow border border-outline-variant/20 flex flex-col gap-6">
+              <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant">Top Collaborators</h3>
+              <div className="space-y-4">
+                 {[
+                   { name: 'Dr. Elena Ross', role: 'Planner', score: 450 },
+                   { name: 'Sarah Miller', role: 'Designer', score: 320 },
+                   { name: 'Marcus T.', role: 'Engineer', score: 180 },
+                 ].map((c, i) => (
+                   <div key={i} className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-sm">
+                         {i + 1}
+                      </div>
+                      <div className="flex-1">
+                         <div className="text-sm font-bold text-on-surface">{c.name}</div>
+                         <div className="text-[10px] font-black uppercase tracking-widest text-on-surface-variant">{c.role}</div>
+                      </div>
+                      <div className="text-xs font-black text-primary-container">+{c.score}</div>
+                   </div>
+                 ))}
               </div>
            </div>
 
