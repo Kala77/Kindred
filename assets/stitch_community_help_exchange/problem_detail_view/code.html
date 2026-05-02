@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kindred - Problem Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-tint": "#1051dd",
+                    "on-surface-variant": "#434655",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffede6",
+                    "primary-fixed-dim": "#b5c4ff",
+                    "secondary-fixed-dim": "#6ddd81",
+                    "on-tertiary-fixed": "#341100",
+                    "on-primary-fixed-variant": "#003cae",
+                    "inverse-surface": "#213145",
+                    "outline": "#737686",
+                    "on-secondary-container": "#00722f",
+                    "tertiary-container": "#b54f00",
+                    "inverse-primary": "#b5c4ff",
+                    "surface-container": "#e5eeff",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed": "#002108",
+                    "surface": "#f8f9ff",
+                    "on-surface": "#0b1c30",
+                    "surface-dim": "#cbdbf5",
+                    "secondary": "#006e2c",
+                    "primary-container": "#2d62ed",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#00164e",
+                    "surface-container-low": "#eff4ff",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#eff0ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary": "#8f3c00",
+                    "outline-variant": "#c3c5d7",
+                    "on-background": "#0b1c30",
+                    "primary": "#0048ce",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-fixed-variant": "#005320",
+                    "secondary-fixed": "#89fa9b",
+                    "secondary-container": "#86f898",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "unit": "4px",
+                    "sm": "8px",
+                    "gutter": "24px",
+                    "xxl": "48px",
+                    "lg": "24px",
+                    "xl": "32px",
+                    "container-max": "1280px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-sm": ["Be Vietnam Pro"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .btn-gradient {
+            background: linear-gradient(to bottom, #2D62ED, #1051dd);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 docked full-width top-0 z-50 sticky border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-[#2D62ED]/5">
+<div class="flex justify-between items-center h-16 max-w-[1280px] mx-auto px-6">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold tracking-tight text-[#2D62ED]">Kindred</span>
+<nav class="hidden md:flex items-center gap-6 font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Home</a>
+<a class="text-[#2D62ED] border-b-2 border-[#2D62ED] pb-1" href="#">Feed</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Post Problem</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Impact</a><a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Experts</a></nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-full text-sm w-64 focus:ring-2 focus:ring-[#2D62ED] transition-all" placeholder="Search problems..." type="text"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Problem Content -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Problem Detail Card -->
+<article class="bg-surface-container-lowest rounded-xl p-lg shadow-[0_4px_20px_-4px_rgba(45,98,237,0.1)] border border-slate-100">
+<div class="flex flex-wrap items-center gap-3 mb-md">
+<span class="px-3 py-1 bg-surface-variant text-primary rounded-full text-label-sm">Urban Mobility</span>
+<span class="flex items-center gap-1 text-slate-500 text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+                            Posted 2 hours ago
+                        </span>
+<span class="flex items-center gap-1 text-secondary font-semibold text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle">check_circle</span>
+                            In Progress
+                        </span>
+</div>
+<h1 class="font-headline-lg text-on-surface mb-md">How might we improve bike safety on Elm Street during rush hour?</h1>
+<div class="prose prose-slate max-w-none mb-lg">
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                            Since the new construction began at the intersection of Elm and 4th, cyclists are being forced into heavy traffic lanes with no buffer. The temporary detour signs are confusing for both drivers and cyclists, leading to several near-misses daily. Our community needs a better temporary solution until the bike lane is restored.
+                        </p>
+</div>
+<!-- Problem Visuals -->
+<div class="grid grid-cols-2 gap-sm mb-lg">
+<div class="aspect-video rounded-lg overflow-hidden bg-slate-100 border border-slate-100">
+<img alt="Busy city intersection" class="w-full h-full object-cover" data-alt="A high-angle photo of a busy metropolitan intersection at golden hour with long shadows and heavy traffic. Cyclists are weaving through cars in a narrow lane. The lighting is warm and cinematic, emphasizing the urban density and the vulnerability of the cyclists. The overall aesthetic is clean and modern, following the Kindred platform's premium minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6XMYBmcbX5ww53iekdH9xLADt6ti3MjAurhCDz_wwoR0hnbTCE4mIZr9jEhFvNBEPKYvkmV1cfEbKRvkJk2tBqbhhYXEsDmtpx_q-7rK4s8B13xURvYVgZO90YJ5CABPstAxnTkkUIMQx4QfElRSLjiM9dlE1FHeyYwa1HefJaVF7nt8hqSKILBi-TPxBvwyu_yI-QrmlrILXjBigoWVNCtPvHFKmeaa_qvYVya4o83MogtfRb6aVFv72egGwn0VvzHg_4tnTWtU"/>
+</div>
+<div class="aspect-video rounded-lg overflow-hidden bg-slate-100 border border-slate-100">
+<img alt="Construction zone signs" class="w-full h-full object-cover" data-alt="A close-up shot of weathered orange construction detour signs reflecting the bright morning sun in a modern city. The background shows blurred architectural elements of a contemporary downtown area. The color palette is dominated by vibrant oranges and cool blues, creating a high-contrast but professional visual that fits the problem-solving theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoJboW5Bwf9ZRhR1emAgQxcZ6E-Xn_6pgfO6gB-iH77u5rD5X7dA_j1_hcTYURJ1cOkTCKOmYrSSSlDf2mzyEjcCBmwH01wYQFTuc7Zd0Il3QDfUtJPzFUA5cUdVA_hMuL8zrUD5SuAaCF2-3mY07_-wC24KZfSOmwYVdM6J69JdlWRoTBhZO_j8YGztiqKUExMu1wyWf9XfeV7akbNzDaoop54r9gRaL_ixZCsSBCJGq53N8w58yaJVdZ9x-ebd1ue3zA_XBfMv4"/>
+</div>
+</div>
+<!-- Interaction Bar -->
+<div class="flex items-center justify-between border-t border-slate-50 pt-md mt-lg">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 hover:bg-slate-50 rounded-lg transition-all text-primary font-semibold">
+<span class="material-symbols-outlined" data-icon="thumb_up">thumb_up</span>
+                                124
+                            </button>
+<button class="flex items-center gap-2 px-4 py-2 hover:bg-slate-50 rounded-lg transition-all text-slate-600">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+                                Share
+                            </button>
+</div>
+<button class="flex items-center gap-2 text-slate-600 hover:text-error transition-all">
+<span class="material-symbols-outlined" data-icon="flag">flag</span>
+                            Report
+                        </button>
+</div>
+</article>
+<!-- Discussion & Solutions Section -->
+<section class="space-y-lg">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-on-surface">Community Solutions (12)</h2>
+<div class="flex items-center gap-2">
+<span class="text-label-sm text-slate-500">Sort by:</span>
+<select class="bg-transparent border-none text-label-sm font-semibold text-primary focus:ring-0 cursor-pointer">
+<option>Most Voted</option>
+<option>Recent</option>
+</select>
+</div>
+</div>
+<!-- Solution Post Input -->
+<div class="bg-surface-container-low rounded-xl p-md border border-primary/10">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold shrink-0">JD</div>
+<div class="flex-1">
+<textarea class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-body-md focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Share a solution or idea..." rows="3"></textarea>
+<div class="flex justify-between items-center mt-3">
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white rounded-full text-slate-500 transition-all"><span class="material-symbols-outlined text-[20px]" data-icon="image">image</span></button>
+<button class="p-2 hover:bg-white rounded-full text-slate-500 transition-all"><span class="material-symbols-outlined text-[20px]" data-icon="link">link</span></button>
+</div>
+<button class="px-6 py-2 rounded-full font-label-md text-on-primary btn-gradient">Post Solution</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Solution Thread -->
+<div class="space-y-md">
+<!-- Top Solution Card -->
+<div class="bg-white rounded-xl p-lg border-2 border-secondary-container shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 px-4 py-1 bg-secondary-container text-on-secondary-container text-label-sm rounded-bl-xl font-bold">
+                                MOST HELPFUL
+                            </div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-1 shrink-0">
+<button class="p-2 hover:bg-slate-50 rounded-lg text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_upward">arrow_upward</span>
+</button>
+<span class="font-bold text-headline-md text-on-surface">52</span>
+<button class="p-2 hover:bg-slate-50 rounded-lg text-slate-400 transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-md text-on-surface">Dr. Elena Ross</span>
+<span class="text-label-sm text-slate-400">• Urban Planner</span>
+<span class="text-label-sm text-slate-400">• 4h ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-md">
+                                        We should implement a "pop-up" bike lane using temporary bollards and bright green ground markings. This has worked effectively in Portland for temporary construction zones. It clearly defines the space for drivers and gives cyclists a protected corridor. I can help coordinate with the local transport board for approval.
+                                    </p>
+<div class="flex gap-4">
+<button class="text-label-sm font-semibold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span> Reply
+                                        </button>
+<button class="text-label-sm font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="volunteer_activism">volunteer_activism</span> Offer Direct Help
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Regular Solution Card -->
+<div class="bg-white rounded-xl p-lg border border-slate-100 shadow-sm">
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-1 shrink-0">
+<button class="p-2 hover:bg-slate-50 rounded-lg text-slate-600 transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_upward">arrow_upward</span>
+</button>
+<span class="font-bold text-headline-md text-on-surface">18</span>
+<button class="p-2 hover:bg-slate-50 rounded-lg text-slate-400 transition-all">
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</button>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-md text-on-surface">Marcus T.</span>
+<span class="text-label-sm text-slate-400">• Local Resident</span>
+<span class="text-label-sm text-slate-400">• 6h ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-md">
+                                        What about just improving the signage? Larger, reflective signs about 100 yards before the construction starts might give drivers more warning to merge slowly.
+                                    </p>
+<div class="flex gap-4">
+<button class="text-label-sm font-semibold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span> Reply
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar / Author Profile -->
+<aside class="lg:col-span-4 space-y-gutter">
+<!-- Author Card -->
+<div class="bg-white rounded-xl p-lg shadow-sm border border-slate-100">
+<h3 class="font-label-md text-slate-400 uppercase tracking-wider mb-md">Problem Solver</h3>
+<div class="flex items-center gap-4 mb-md">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-slate-200">
+<img alt="Author avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a friendly-looking man in his late 20s with a warm smile. He is set against a soft-focus office background with natural light. The photograph is high-quality with balanced lighting, creating an approachable and trustworthy 'human' feel consistent with the Kindred brand's focus on community intelligence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUexFgPsifhydXAl73htRnzrDdqZqZ3PeBed386w6BJGExNCOGoUaK1vQiLaLRLQefoskxW6FS3mUQ8ExYTrXdYdvBI7T3V98D8FSt__kZypsL2qULZNrLC612zTBK4f2MF79QzoSyNz4eP1YBkWs9rJSvFYjCFhZg0HSk3iCBNXew5YPM-FB_Dl3jeIhhjXzJuWy-4UicHKTQBLXuzu5gqtJ0_CL_pPC97rvglb1T4Zyy6EzJqqRe7G2ht6I0SeTFSg9KwL_6EA"/>
+</div>
+<div>
+<p class="font-headline-md text-on-surface">David Chen</p>
+<p class="text-body-sm text-slate-500">Community Leader • 12 Problems Solved</p>
+</div>
+</div>
+<p class="text-body-sm text-on-surface-variant mb-lg leading-relaxed">
+                        I'm passionate about cycling safety and urban infrastructure. I've been living in this neighborhood for 5 years and want to make it safer for everyone.
+                    </p>
+<button class="w-full py-2 rounded-lg border-2 border-primary text-primary font-label-md hover:bg-primary/5 transition-all">Follow Profile</button>
+</div>
+<!-- Stats/Community Context -->
+<div class="bg-surface-container-high rounded-xl p-lg">
+<h3 class="font-label-md text-on-surface-variant mb-md">Community Impact</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-body-sm text-slate-600">Relevance score</span>
+<span class="text-label-md text-primary">94%</span>
+</div>
+<div class="w-full bg-white rounded-full h-2">
+<div class="bg-primary h-full rounded-full w-[94%]"></div>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="group">group</span>
+                            42 people in your area interested
+                        </div>
+<div class="flex items-center gap-2 text-body-sm text-slate-600">
+<span class="material-symbols-outlined text-[18px] text-tertiary" data-icon="trending_up">trending_up</span>
+                            Top 5% trending this week
+                        </div>
+</div>
+</div>
+<!-- Related Problems -->
+<div class="space-y-md">
+<h3 class="font-headline-md text-on-surface">Related</h3>
+<div class="space-y-sm">
+<a class="block p-md bg-white rounded-lg border border-slate-100 hover:border-primary/30 transition-all group" href="#">
+<p class="text-label-sm text-slate-400 mb-1">Public Space</p>
+<p class="font-label-md text-on-surface group-hover:text-primary transition-colors">Lighting improvements for Park View...</p>
+</a>
+<a class="block p-md bg-white rounded-lg border border-slate-100 hover:border-primary/30 transition-all group" href="#">
+<p class="text-label-sm text-slate-400 mb-1">Infrastructure</p>
+<p class="font-label-md text-on-surface group-hover:text-primary transition-colors">New crosswalk design on 2nd Ave...</p>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 max-w-[1280px] mx-auto px-6 gap-4">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Kindred</span>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500">© 2024 Kindred. Built for community intelligence.</p>
+</div>
+<div class="flex gap-8 font-['Plus_Jakarta_Sans'] text-xs">
+<a class="text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Privacy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Terms</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Community Guidelines</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

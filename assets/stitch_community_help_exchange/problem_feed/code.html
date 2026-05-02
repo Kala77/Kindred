@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-tint": "#1051dd",
+                        "on-surface-variant": "#434655",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffede6",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "secondary-fixed-dim": "#6ddd81",
+                        "on-tertiary-fixed": "#341100",
+                        "on-primary-fixed-variant": "#003cae",
+                        "inverse-surface": "#213145",
+                        "outline": "#737686",
+                        "on-secondary-container": "#00722f",
+                        "tertiary-container": "#b54f00",
+                        "inverse-primary": "#b5c4ff",
+                        "surface-container": "#e5eeff",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-variant": "#d3e4fe",
+                        "on-secondary-fixed": "#002108",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#0b1c30",
+                        "surface-dim": "#cbdbf5",
+                        "secondary": "#006e2c",
+                        "primary-container": "#2d62ed",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#00164e",
+                        "surface-container-low": "#eff4ff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#eff0ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary": "#8f3c00",
+                        "outline-variant": "#c3c5d7",
+                        "on-background": "#0b1c30",
+                        "primary": "#0048ce",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "primary-fixed": "#dce1ff",
+                        "on-secondary-fixed-variant": "#005320",
+                        "secondary-fixed": "#89fa9b",
+                        "secondary-container": "#86f898",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xxl": "48px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "container-max": "1280px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-sm": ["Be Vietnam Pro"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-border {
+            border-bottom: 2px solid #2D62ED;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 20px -2px rgba(45, 98, 237, 0.08);
+        }
+        .btn-gradient {
+            background: linear-gradient(to bottom, #2D62ED, #1051dd);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 docked full-width top-0 z-50 sticky border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-[#2D62ED]/5">
+<div class="flex justify-between items-center h-16 max-w-[1280px] mx-auto px-6">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold tracking-tight text-[#2D62ED]">Kindred</span>
+<div class="hidden md:flex items-center gap-6 font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Home</a>
+<a class="text-[#2D62ED] border-b-2 border-[#2D62ED] pb-1 transition-all duration-200" href="#">Feed</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Post Problem</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Impact</a><a class="text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Experts</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" data-icon="search">search</span>
+<input class="bg-slate-50 border-none rounded-full pl-10 pr-4 py-2 text-sm w-64 focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="Search problems..." type="text"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-[1280px] mx-auto px-6 py-xxl grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Sidebar Filters -->
+<aside class="md:col-span-3 space-y-xl">
+<section class="bg-white p-lg rounded-xl custom-shadow border border-slate-100">
+<h3 class="font-headline-md text-on-surface mb-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="filter_list">filter_list</span>
+                    Categories
+                </h3>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-between p-md rounded-lg bg-surface-container text-primary font-label-md transition-all">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-md" data-icon="home">home</span> Home</span>
+<span class="text-xs bg-white px-2 py-0.5 rounded-full">24</span>
+</button>
+<button class="flex items-center justify-between p-md rounded-lg hover:bg-slate-50 text-slate-600 font-label-md transition-all">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-md" data-icon="devices">devices</span> Tech</span>
+<span class="text-xs text-slate-400">18</span>
+</button>
+<button class="flex items-center justify-between p-md rounded-lg hover:bg-slate-50 text-slate-600 font-label-md transition-all">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-md" data-icon="auto_awesome">auto_awesome</span> Life Hacks</span>
+<span class="text-xs text-slate-400">12</span>
+</button>
+<button class="flex items-center justify-between p-md rounded-lg hover:bg-slate-50 text-slate-600 font-label-md transition-all">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-md" data-icon="garden_cart">garden_cart</span> Garden</span>
+<span class="text-xs text-slate-400">7</span>
+</button>
+</div>
+</section>
+<section class="bg-white p-lg rounded-xl custom-shadow border border-slate-100">
+<h3 class="font-headline-md text-on-surface mb-md">Status</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border-2 border-primary text-primary font-label-sm">Unsolved</button>
+<button class="px-4 py-2 rounded-full border-2 border-transparent bg-slate-50 text-slate-500 font-label-sm hover:border-slate-200">In Progress</button>
+<button class="px-4 py-2 rounded-full border-2 border-transparent bg-slate-50 text-slate-500 font-label-sm hover:border-slate-200">Solved</button>
+</div>
+</section>
+<section class="relative overflow-hidden rounded-xl h-48 group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A warm, inviting community workspace with soft natural light streaming through windows, featuring people collaborating and a high-end minimalist design aesthetic with vibrant blue accents. The lighting is bright and cheerful, reinforcing a sense of collective intelligence and reliable support." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1D5T_HA_8qV4-JrWYRpEXEih0sTWfc0ANRYCuHrqs_XKLhp_UcArVJeeTJdjudkSP_5iJCSqcZQ9g7DgsMYd8MJBSdUx4NiUX39cYr-wSzh93yEaaKrpPIabqa4Fe3u0ownDg8OXAj1sXO2wwNhvAX2yM4hBP_DnbTdRcPStl8lyHnV5XjeR_XbM6aHActVFfAF_rhh-gGjfkL2idzMvfBh3WaiW4mOOv_lu-2IhaY9hR88BCwWE0AiLBZxl6k-_mozGvKQODuT4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-lg text-white">
+<p class="font-headline-md leading-tight mb-2">Be the hero someone needs today.</p>
+<p class="text-xs opacity-90">Every small insight helps build our collective intelligence.</p>
+</div>
+</section>
+</aside>
+<!-- Main Feed -->
+<div class="md:col-span-9">
+<header class="flex justify-between items-end mb-xl">
+<div>
+<h1 class="font-headline-xl text-on-surface">Community Feed</h1>
+<p class="text-body-md text-on-surface-variant">Real-life problems waiting for your unique perspective.</p>
+</div>
+<div class="flex items-center gap-2 text-label-md text-slate-500">
+                    Sort by: 
+                    <select class="bg-transparent border-none font-bold text-primary focus:ring-0 cursor-pointer">
+<option>Newest First</option>
+<option>Most Helpful</option>
+<option>Urgent</option>
+</select>
+</div>
+</header>
+<div class="grid grid-cols-1 gap-gutter">
+<!-- Problem Card 1 -->
+<article class="bg-white rounded-xl p-lg custom-shadow border border-slate-100 group transition-all hover:translate-y-[-4px]">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-md">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A professional headshot of a friendly man in his 30s with a warm smile, set against a clean, softly lit studio background with gentle blue and white tones. The aesthetic is clean, modern, and human-centric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVjihH5dcOM6v3DGwYhjybBTo5XaLSc-njlXB2Ry6udcLL6HOhARbNGb7fc1D2WD-3ieWmKdaQTasLpFQGkC5C9YQGYO1xQzbbNOF7Qr69MQkjA-86P82qIjscYohQhxkNsmSSzDkU9JSPhGPhUEUhO5qysy-ZTccvu2Lep8DZM8dhWd6jVPY3StFo8NhMEpCDnSZ8Ta0sdNjD0I8uclBPu-IQhwHtZSF6H05WtyaxZBFWMRLMkLA5V3R0i0ATrFHCdkbnLJFEIPk"/>
+<div>
+<h4 class="font-label-md text-on-surface">Marcus Chen</h4>
+<span class="text-label-sm text-slate-400">Posted 2 hours ago</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">In Progress</span>
+</div>
+<h2 class="font-headline-md text-on-surface group-hover:text-primary transition-colors mb-sm">How to optimize home office layout for natural light?</h2>
+<p class="text-body-md text-on-surface-variant mb-lg line-clamp-2">
+                        I'm struggling with glare on my monitor during the morning hours. My desk is currently facing east, but the windows are on the south wall. Looking for creative furniture arrangements...
+                    </p>
+<div class="flex items-center justify-between border-t border-slate-50 pt-lg">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-slate-500 font-label-sm">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span> 12 Answers
+                            </span>
+<span class="flex items-center gap-1 text-slate-500 font-label-sm">
+<span class="material-symbols-outlined text-sm" data-icon="lightbulb">lightbulb</span> 4 Solutions
+                            </span>
+</div>
+<button class="btn-gradient text-white px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                            Help Now
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Problem Card 2 -->
+<article class="bg-white rounded-xl p-lg custom-shadow border border-slate-100 group transition-all hover:translate-y-[-4px]">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-md">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of a thoughtful young woman with glasses, expressing intelligence and empathy. The lighting is soft and warm, with a blurred background of a modern living space featuring pale blues and whites to match the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmCzvoOVEtbeCg3iSLiUTHSWgtG9HXUNOd2Lc2HMimNY2MLXubN_bgDNdMi3RVxQUhVnAv3ZnMO5UlMObweJBCniR9jaG6vLQcgoKygbndqOq22Pi8z7SSri6mIq0Lz1GMr801k-7judIWfKI-5MsanzbcX65j7AVdfXUqHFhShy9P_VqMDwxELf9ZWvDOB_Ga7pQ1pSQSxdHbojoCOd1spZT7szHTvrhDOzheWq2Y9CNJfnqHfQszvfZWXqN8o6zJ83ZMOWuH_nM"/>
+<div>
+<h4 class="font-label-md text-on-surface">Sarah Jenkins</h4>
+<span class="text-label-sm text-slate-400">Posted 5 hours ago</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm">Unsolved</span>
+</div>
+<h2 class="font-headline-md text-on-surface group-hover:text-primary transition-colors mb-sm">Low-maintenance herb garden for small apartment balcony</h2>
+<p class="text-body-md text-on-surface-variant mb-lg line-clamp-2">
+                        I have a tiny north-facing balcony and I've killed three basil plants already. What herbs can thrive with minimal direct sunlight and high wind?
+                    </p>
+<div class="flex items-center justify-between border-t border-slate-50 pt-lg">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-slate-500 font-label-sm">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span> 5 Answers
+                            </span>
+</div>
+<button class="btn-gradient text-white px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                            Help Now
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Problem Card 3 (Bento-style Highlight) -->
+<article class="relative bg-white rounded-xl overflow-hidden custom-shadow border border-slate-100 group transition-all hover:translate-y-[-4px]">
+<div class="grid md:grid-cols-5 h-full">
+<div class="md:col-span-2 relative">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a vintage mechanical clock with its intricate internal gears exposed. The lighting is dramatic yet soft, highlighting the metallic textures against a clean, modern workspace background. The color palette is composed of neutrals and sophisticated blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCND5C8l51S7evUl-_l-67ljwdMMDT0l9DVPli8S9GDhAA9TJWqttzj3qiKhuQkD_pb9n-diXiylMuv6k49ifk1BOmr-m1XxydwCnGuhKSNp7vjtl_7qLOKCWbZmqDEtQyRSKHO80WYZUTplqsKQx4O56tXr00u5Omsvm1opgbtjVTPYXmcfbY2RvUGoyA9jVwLVpCQWIqxJ-B91eIbfmXL9VbPH4_UwL_8lz0ivJ7a9K_QxCDHcGRvngcOCGbyk71gh6PdyhiuWuk"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white text-[10px] uppercase font-extrabold px-2 py-1 rounded tracking-wider">Expert Needed</span>
+</div>
+</div>
+<div class="md:col-span-3 p-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-md mb-md">
+<h4 class="font-label-md text-on-surface">Julian Thorne</h4>
+<span class="text-label-sm text-slate-400">Posted Yesterday</span>
+</div>
+<h2 class="font-headline-md text-on-surface group-hover:text-primary transition-colors mb-sm">Repairing a 1940s analog timepiece</h2>
+<p class="text-body-md text-on-surface-variant mb-md line-clamp-2">
+                                    The balance wheel seems stuck and I'm afraid to apply too much force. Looking for someone with horology experience or a steady hand.
+                                </p>
+</div>
+<div class="flex items-center justify-between pt-lg">
+<span class="px-3 py-1 rounded-full bg-slate-100 text-slate-600 font-label-sm">Tech/Mechanical</span>
+<button class="btn-gradient text-white px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Problem Card 4 -->
+<article class="bg-white rounded-xl p-lg custom-shadow border border-slate-100 group transition-all hover:translate-y-[-4px]">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">EM</div>
+<div>
+<h4 class="font-label-md text-on-surface">Elena Moretti</h4>
+<span class="text-label-sm text-slate-400">Posted 8 hours ago</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm">Unsolved</span>
+</div>
+<h2 class="font-headline-md text-on-surface group-hover:text-primary transition-colors mb-sm">Budget-friendly soundproofing for a basement studio</h2>
+<p class="text-body-md text-on-surface-variant mb-lg line-clamp-2">
+                        I'm recording a podcast but the furnace noise is bleeding through the walls. Are acoustic foam panels actually worth it or are there DIY alternatives?
+                    </p>
+<div class="flex items-center justify-between border-t border-slate-50 pt-lg">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-slate-500 font-label-sm">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span> 28 Answers
+                            </span>
+</div>
+<button class="btn-gradient text-white px-6 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                            Help Now
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-xxl">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 hover:bg-slate-50 text-slate-400">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-50 text-slate-600 font-bold">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-50 text-slate-600 font-bold">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-50 text-slate-600 font-bold">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 hover:bg-slate-50 text-slate-400">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800 mt-xxl">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 max-w-[1280px] mx-auto px-6 gap-4">
+<div class="space-y-2 text-center md:text-left">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Kindred</span>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500">© 2024 Kindred. Built for community intelligence.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Privacy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Terms</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Community Guidelines</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- FAB for Posting Problem -->
+<button class="fixed bottom-8 right-8 btn-gradient text-white p-4 rounded-full shadow-2xl flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 group">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-label-md pr-2">Post Problem</span>
+</button>
+</body></html>

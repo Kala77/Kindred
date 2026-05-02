@@ -17,7 +17,8 @@ function AnimatedRoutes() {
   
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location}>
+      {/* @ts-expect-error - framer-motion requires key on Routes for AnimatePresence */}
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
         <Route path="/feed" element={<PageWrapper><Feed /></PageWrapper>} />
         <Route path="/impact" element={<PageWrapper><Impact /></PageWrapper>} />

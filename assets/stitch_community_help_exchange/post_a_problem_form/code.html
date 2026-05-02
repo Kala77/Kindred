@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-tint": "#1051dd",
+                        "on-surface-variant": "#434655",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffede6",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "secondary-fixed-dim": "#6ddd81",
+                        "on-tertiary-fixed": "#341100",
+                        "on-primary-fixed-variant": "#003cae",
+                        "inverse-surface": "#213145",
+                        "outline": "#737686",
+                        "on-secondary-container": "#00722f",
+                        "tertiary-container": "#b54f00",
+                        "inverse-primary": "#b5c4ff",
+                        "surface-container": "#e5eeff",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-variant": "#d3e4fe",
+                        "on-secondary-fixed": "#002108",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#0b1c30",
+                        "surface-dim": "#cbdbf5",
+                        "secondary": "#006e2c",
+                        "primary-container": "#2d62ed",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#00164e",
+                        "surface-container-low": "#eff4ff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#eff0ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary": "#8f3c00",
+                        "outline-variant": "#c3c5d7",
+                        "on-background": "#0b1c30",
+                        "primary": "#0048ce",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "primary-fixed": "#dce1ff",
+                        "on-secondary-fixed-variant": "#005320",
+                        "secondary-fixed": "#89fa9b",
+                        "secondary-container": "#86f898",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xxl": "48px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "container-max": "1280px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-sm": ["Be Vietnam Pro"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f8f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .button-gradient { background: linear-gradient(to bottom, #2D62ED, #0048ce); }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 docked full-width top-0 z-50 sticky border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-[#2D62ED]/5">
+<div class="flex justify-between items-center h-16 max-w-[1280px] mx-auto px-6">
+<div class="text-2xl font-extrabold tracking-tight text-[#2D62ED]">Kindred</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Home</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Feed</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-[#2D62ED] border-b-2 border-[#2D62ED] pb-1" href="#">Post Problem</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Impact</a><a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Experts</a></nav>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-xxl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Side: Content & Intro -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm w-fit mb-md">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+                    Community Intelligence
+                </span>
+<h1 class="font-headline-xl text-on-surface mb-md">Turn your challenge into a collective <span class="text-primary">solution.</span></h1>
+<p class="font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+                    Kindred is built on the belief that no problem is too small to share. Describe what's on your mind, and let your neighbors help you navigate the way forward.
+                </p>
+<div class="space-y-md">
+<div class="flex items-start gap-md p-md rounded-xl bg-surface-container-low border border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">visibility</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface">Stay Anonymous</h4>
+<p class="font-body-sm text-on-surface-variant">You can choose to post without revealing your identity to the broader community.</p>
+</div>
+</div>
+<div class="flex items-start gap-md p-md rounded-xl bg-surface-container-low border border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface">Verified Support</h4>
+<p class="font-body-sm text-on-surface-variant">Experts and community leaders often chime in with actionable advice.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: The Form -->
+<div class="lg:col-span-7">
+<div class="bg-white rounded-xl p-lg shadow-sm border border-slate-100 relative overflow-hidden">
+<!-- Subtle Decorative Background -->
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<form class="relative z-10 space-y-lg">
+<!-- Step Progress Indicator -->
+<div class="flex items-center gap-2 mb-md">
+<div class="h-1.5 w-12 rounded-full bg-primary"></div>
+<div class="h-1.5 w-12 rounded-full bg-surface-variant"></div>
+<div class="h-1.5 w-12 rounded-full bg-surface-variant"></div>
+<span class="ml-auto font-label-sm text-on-surface-variant">Step 1 of 3</span>
+</div>
+<!-- Title Input -->
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface block" for="title">Catchy Title</label>
+<input class="w-full px-md py-3 rounded-lg border-2 border-slate-100 focus:border-primary focus:ring-0 transition-all font-body-md placeholder:text-slate-400" id="title" placeholder="e.g., How can we reduce plastic waste in our park?" type="text"/>
+<p class="font-body-sm text-on-surface-variant">Summarize your problem in one clear sentence.</p>
+</div>
+<!-- Category Grid -->
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface block">Category</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-sm">
+<button class="flex flex-col items-center gap-2 p-md rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all" type="button">
+<span class="material-symbols-outlined" data-weight="fill">eco</span>
+<span class="font-label-sm">Environment</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-md rounded-xl border-2 border-slate-100 hover:border-primary/30 transition-all" type="button">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-sm">Education</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-md rounded-xl border-2 border-slate-100 hover:border-primary/30 transition-all" type="button">
+<span class="material-symbols-outlined">health_and_safety</span>
+<span class="font-label-sm">Well-being</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-md rounded-xl border-2 border-slate-100 hover:border-primary/30 transition-all" type="button">
+<span class="material-symbols-outlined">commute</span>
+<span class="font-label-sm">Transport</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-md rounded-xl border-2 border-slate-100 hover:border-primary/30 transition-all" type="button">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-sm">Social</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-md rounded-xl border-2 border-slate-100 hover:border-primary/30 transition-all" type="button">
+<span class="material-symbols-outlined">more_horiz</span>
+<span class="font-label-sm">Other</span>
+</button>
+</div>
+</div>
+<!-- Description Input -->
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface block" for="description">Detailed Description</label>
+<textarea class="w-full px-md py-3 rounded-lg border-2 border-slate-100 focus:border-primary focus:ring-0 transition-all font-body-md placeholder:text-slate-400" id="description" placeholder="Tell us more about the challenge. Who is affected? What have you tried so far?" rows="5"></textarea>
+</div>
+<!-- File Upload Area -->
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface block">Add Visuals (Optional)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-xl flex flex-col items-center justify-center gap-md hover:bg-slate-50 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add_photo_alternate</span>
+</div>
+<div class="text-center">
+<p class="font-label-md text-on-surface">Click to upload or drag and drop</p>
+<p class="font-body-sm text-on-surface-variant">PNG, JPG, or GIF (max. 10MB)</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-between pt-md">
+<button class="px-gutter py-3 rounded-full font-label-md text-on-surface-variant hover:bg-slate-100 transition-colors" type="button">Save Draft</button>
+<button class="px-xl py-3 rounded-full button-gradient text-on-primary font-label-md shadow-lg shadow-primary/20 hover:shadow-xl transition-all active:scale-95 flex items-center gap-2" type="submit">
+                                Next Step
+                                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Featured Section: Inspiration -->
+<section class="mt-xxl pt-xxl border-t border-slate-100">
+<h2 class="font-headline-md text-on-surface mb-xl text-center">Need some inspiration?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-white p-md rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-all">
+<div class="h-40 rounded-lg mb-md bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed aerial view of a vibrant community garden in an urban setting, featuring lush green vegetables, organized wooden planters, and local residents collaborating under a bright, clear morning sun. The photography is crisp and modern, reflecting a light-mode aesthetic with natural blue and green tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPCfFstDaXNBvurduiFYkcau_1q46RI0jsjiKIUkXqFqTjYeI5xgYhXfgKl8wzhVrTkVKbder5dtYQSkW3TrkQynTPEd9SXbbPihO5UwQhL9uExoZRjQcw57ZZ9skysjjyha7OlKWXt_ghka1uH9IcypB514cgI0-OnxEMsPBQwo8TecqWYfdKBOyC_T_DAm8FHFgf2IUOjKk-WHn2x3IT1BFV6hKwNXmW-GWSpuDuShOWZU-8Ooi4eBvj37cx43FCLXs2Ysw9TVs"/>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">Environment</span>
+<h3 class="font-label-md text-on-surface mt-sm">Restoring the Riverside Trail</h3>
+<p class="font-body-sm text-on-surface-variant mt-xs line-clamp-2">"The trail is overgrown and lacks proper signage. How can we organize a weekend volunteer squad?"</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-md rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-all">
+<div class="h-40 rounded-lg mb-md bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern collaborative workspace featuring three diverse individuals engaged in a positive brainstorming session. They are gathered around a sleek wooden table with digital tablets and notebooks, illuminated by soft window light and warm interior glows. The mood is optimistic and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU35j0wOEFIwi5FBQpnYrgVmHtefbEIDb4DRRaYhFS_gkzFvzI2xP6tFjKCMn1NyamPZy8KLZzFY6z_2caAip3TIcc_W_rUqlALmJaHssqGWb8q3mnNbbmJ0sWV3OXfTxvJ2kcIzSFnYy46furbgugWYuQK2CgBl0_ycoNbtiMdHSdqHVWmpXB2EPTQSHvFg1BGyajYmJgiuY_8lEWRtWDksCGkyFE_zVTtg51AgtJd-sI2ZPDM717M2yx7mimpLsY2OqJoTV7UDU"/>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm">Social</span>
+<h3 class="font-label-md text-on-surface mt-sm">Small Business Saturday</h3>
+<p class="font-body-sm text-on-surface-variant mt-xs line-clamp-2">"Foot traffic is down for local artisans. Can we create a digital map or treasure hunt to help?"</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-md rounded-xl shadow-sm border border-slate-50 hover:shadow-md transition-all">
+<div class="h-40 rounded-lg mb-md bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist town hall interior with modular seating and a large digital screen displaying community infographics. The lighting is high-key and airy, creating a welcoming atmosphere that emphasizes civic engagement and collective intelligence in a modern urban center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9RLuKHy56pGPB7oQSC3WjDRqHOJffbW5-ezFQUlyf2bPova5fCj3HzNtCSRRigzSNKl3cV7aVoxiSP_MMhHLiaMwOE-pX7rHrjJtKjRvcfTZ6VrJRKEW79AH7rrefYLH0t0dDR-kwYaB3FkD8tXrN6reyTw1Kihxn1j4_TnhtH0shEeF79EYmbcUfGnsIclHUt1p_84NMKiagPRz1ES3lNBfCGxWBNjsuoaXgdfWt9ugy7LCj6Vokd8M8bSto0OKs4OjdDw0-KhY"/>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm">Transport</span>
+<h3 class="font-label-md text-on-surface mt-sm">Dangerous 4th St Crossing</h3>
+<p class="font-body-sm text-on-surface-variant mt-xs line-clamp-2">"Visibility is poor at night for cyclists. Let's gather data to present a case to the city council."</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 max-w-[1280px] mx-auto px-6 gap-4">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-bold text-slate-900 dark:text-white">Kindred</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500">© 2024 Kindred. Built for community intelligence.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity hover:opacity-80" href="#">Privacy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity hover:opacity-80" href="#">Terms</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity hover:opacity-80" href="#">Community Guidelines</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 hover:text-[#2D62ED] underline decoration-2 underline-offset-4 transition-opacity hover:opacity-80" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

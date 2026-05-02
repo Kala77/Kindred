@@ -166,7 +166,7 @@ export default function Impact() {
               <div className="inline-block bg-white/10 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4">
                  Global Metrics
               </div>
-              <h2 className="text-4xl font-extrabold font-display leading-[1.1] tracking-tighter">Global Reach,<br />Local Impact.</h2>
+              <h2 className="text-4xl font-extrabold font-display leading-[1.1] tracking-tighter text-white">Global Reach,<br />Local Impact.</h2>
               <p className="text-white/60 text-lg leading-relaxed max-w-md">Matching contributors to localized problems in 42 countries and counting.</p>
               <div className="flex gap-4">
                  <button className="bg-white text-on-surface px-8 py-4 rounded-2xl font-bold font-display transition-transform active:scale-95">

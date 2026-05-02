@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#2d62ed",
+            "on-background": "#0b1c30",
+            "surface-variant": "#d3e4fe",
+            "surface-tint": "#1051dd",
+            "on-tertiary-fixed": "#341100",
+            "inverse-surface": "#213145",
+            "outline": "#737686",
+            "on-primary-fixed": "#00164e",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#783200",
+            "inverse-primary": "#b5c4ff",
+            "error": "#ba1a1a",
+            "primary-fixed": "#dce1ff",
+            "surface-bright": "#f8f9ff",
+            "on-primary-container": "#eff0ff",
+            "on-secondary-container": "#00722f",
+            "on-surface-variant": "#434655",
+            "on-secondary-fixed-variant": "#005320",
+            "surface": "#f8f9ff",
+            "secondary-fixed-dim": "#6ddd81",
+            "background": "#f8f9ff",
+            "surface-container-highest": "#d3e4fe",
+            "secondary": "#006e2c",
+            "primary-fixed-dim": "#b5c4ff",
+            "primary": "#0048ce",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#8f3c00",
+            "secondary-fixed": "#89fa9b",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#ffb690",
+            "tertiary-fixed": "#ffdbca",
+            "on-tertiary-container": "#ffede6",
+            "tertiary-container": "#b54f00",
+            "on-surface": "#0b1c30",
+            "error-container": "#ffdad6",
+            "secondary-container": "#86f898",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#eaf1ff",
+            "surface-container": "#e5eeff",
+            "surface-dim": "#cbdbf5",
+            "on-primary-fixed-variant": "#003cae",
+            "outline-variant": "#c3c5d7",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#002108",
+            "surface-container-high": "#dce9ff",
+            "surface-container-low": "#eff4ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "unit": "4px",
+            "gutter": "24px",
+            "xxl": "48px",
+            "sm": "8px",
+            "lg": "24px",
+            "container-max": "1280px",
+            "xs": "4px",
+            "md": "16px",
+            "xl": "32px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-sm": ["12px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-shadow {
+      box-shadow: 0 4px 20px -2px rgba(45, 98, 237, 0.08);
+    }
+    .glass-effect {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.85);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation -->
+<nav class="bg-white/90 backdrop-blur-md dark:bg-slate-900/90 docked full-width top-0 z-50 sticky border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-[#2D62ED]/5">
+<div class="flex justify-between items-center h-16 max-w-[1280px] mx-auto px-6">
+<div class="text-2xl font-extrabold tracking-tight text-[#2D62ED]">Kindred</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Home</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Feed</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Post Problem</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[#2D62ED] transition-all duration-200" href="#">Impact</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium text-[#2D62ED] border-b-2 border-[#2D62ED] pb-1 transition-all duration-200" href="#">Experts</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-600 p-2 hover:bg-slate-50 rounded-full">search</button>
+<button class="bg-[#2D62ED] text-white font-['Plus_Jakarta_Sans'] text-sm font-medium px-6 py-2 rounded-full active:scale-98 transition-transform shadow-md shadow-[#2D62ED]/20">Sign In</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1280px] mx-auto px-6 py-12">
+<!-- Hero / Header Section -->
+<header class="mb-xxl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-primary text-label-sm mb-4">
+<span class="material-symbols-outlined text-[14px] mr-1">verified</span>
+            Verified Local Talent
+          </span>
+<h1 class="font-headline-xl text-on-background mb-4">Find expert neighbors for every challenge.</h1>
+<p class="text-body-lg text-on-surface-variant">Kindred connects you with skilled professionals in your community who volunteer their time to solve collective problems.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex items-center gap-2 bg-white border border-outline-variant px-4 py-2.5 rounded-xl hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-outline">tune</span>
+<span class="font-label-md">Filters</span>
+</button>
+<button class="flex items-center gap-2 bg-white border border-outline-variant px-4 py-2.5 rounded-xl hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-outline">location_on</span>
+<span class="font-label-md">San Francisco, CA</span>
+</button>
+</div>
+</div>
+<!-- Categories Pills -->
+<div class="flex flex-wrap gap-2 mt-8">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label-md shadow-lg shadow-primary/20">All Specialists</button>
+<button class="bg-white border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">Urban Planners</button>
+<button class="bg-white border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">Carpenters</button>
+<button class="bg-white border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">Legal Advisors</button>
+<button class="bg-white border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">Civil Engineers</button>
+<button class="bg-white border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">Environmentalists</button>
+<button class="bg-white border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">Social Workers</button>
+</div>
+</header>
+<!-- Expert Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Expert Card 1 (Large Focus) -->
+<div class="md:col-span-7 bg-white border border-slate-100 rounded-3xl p-lg custom-shadow flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div class="flex gap-md">
+<img class="w-20 h-20 rounded-full object-cover border-4 border-surface-container" data-alt="A professional headshot of a friendly middle-aged man with short dark hair and a warm smile, wearing a casual linen shirt. The background is a soft-focus architectural office with drafting tables and warm natural light. The overall mood is approachable, professional, and reliable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPK5wJbS9wHCq-VSaHyvw_UaOQ3zWHII3TIG89e94KCsv3nnQ6hHhPnvKyKKCs8mrUVkm9QVZuILWqWRvmD6_1x-QfuHEjJ_j58WMlNLQ1RkYfMlaT0_txMAVbfFDJIHURLRSf3SYBSRU0za9ye9Y1MSLLJuHptgEXoy_wk6XDUimhYoYATt2CsyFTe_urSytwuiqGkMLQbfc7kkT4_iJxibiUDic7Fqc5T9QreKFFaNG77sYRA9M_O0UWjhvQQ2ZdKuc6Bmi4tqQ"/>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-on-background">Marcus Thorne</h3>
+<span class="material-symbols-outlined text-primary text-[20px]" data-weight="fill">verified</span>
+</div>
+<p class="text-primary font-label-md">Senior Urban Planner • 12 years exp.</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-weight="fill">star</span>
+<span class="text-label-sm text-on-surface-variant">4.9 (42 consultations)</span>
+</div>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Active Now</span>
+</div>
+<div class="my-lg">
+<p class="text-body-md text-on-surface-variant leading-relaxed line-clamp-3">
+            Passionate about transforming underutilized urban spaces into thriving community hubs. I can help with zoning inquiries, public space design, and navigating city permit processes for community gardens or parklets.
+          </p>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 rounded-lg bg-surface-container text-on-surface-variant text-label-sm">Zoning Laws</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-on-surface-variant text-label-sm">Urban Design</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container text-on-surface-variant text-label-sm">Public Policy</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 px-6 rounded-xl font-label-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+            Ask for Advice
+          </button>
+<button class="bg-surface-container text-on-surface-variant py-3 px-4 rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+<!-- Stats Card (Small) -->
+<div class="md:col-span-5 bg-primary text-on-primary rounded-3xl p-lg flex flex-col justify-center relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline-lg mb-2">1,240+</h4>
+<p class="text-body-md opacity-90 mb-6">Problems solved by neighbors this month alone. Join the collective intelligence movement.</p>
+<div class="flex -space-x-4">
+<img class="w-10 h-10 rounded-full border-2 border-primary" data-alt="Close up face of a smiling woman with curly hair against a soft blue background. High-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7vgEDX3OZW1nPdt9RG_PXIoelMzWquc01ScrCkRM7bT6H3DxQGa8a1AV64OOZHNw0ogmOFBkVzItPwNCuu1IW0doXo-v-McAxn0UPWKH7PutjtkNn8wlFO1DsJTTWAlVYK25GFGToKYlB3jUjQGrY0-7MTr76NqqTCzSsQT1zJE5EkIzGjB30tNypMj4hbDLXbBZx9hF-i33vvmifa2IUcsoj3U1TXaPhNymFpy5-HYjqKXQIaUXFs2abh4E0f33xktHuE0FpGk"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary" data-alt="Profile of a young man with glasses laughing in a bright sunlit outdoor setting. High-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBppGKMQE0XP9UQhBvMAifRYMKf45gt918sO__bqvps-838T518tAzbu-rVHZMvX1FTHe9f4cygk-f8G9R9BvlelunYmmpVp7_7kfzAoOBU65Kv1LinA0uTnip9FUE9HBSBUxICD9juRZpTCM_bNuNC7EXTSGWOO1i_3B8c_bEmNqJN2fdhd-_1A0KkRGNLRpomoYOkfhDEI5JHVqfoiT-sP4mG5Bvi6LOXDEueNdjp-n3verrsYNvuyYmdZbvz2Zf5I64HzDc96Vs"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary" data-alt="Portrait of a professional woman with a confident smile in a modern office interior. High-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByoVwrm7NPPFHnGvtBATZ9K8DibhDh6usvUqane68pyPNQHPz9HvmB-NoljNalzO-FhzVylet7lbhbCCjKUg1n9drGxTYO0O9n72-Yw8Xj9nKfGuQJpc709d-Z-0q0ruUdyDoEbpMwjoOHcb-ukZSW5JySiHoqAf7CU89ClbveGHlaS-RN1uIzZqRVfOWoVBZo78nT49Fy90_ccgUOD8tgKEEBlUMhnMxRw0JAMXIswX3qShevdS7KA3Kg_nUMNMlvjNaAzWw1e0s"/>
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-on-primary-container text-primary flex items-center justify-center text-label-sm font-bold">+12</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+</div>
+<!-- Expert Card 2 (Standard) -->
+<div class="md:col-span-4 bg-white border border-slate-100 rounded-3xl p-md custom-shadow flex flex-col h-full group hover:translate-y-[-4px] transition-all">
+<div class="flex items-center gap-md mb-4">
+<img class="w-16 h-16 rounded-2xl object-cover" data-alt="A portrait of a male carpenter with a beard and sawdust on his apron, standing in a workshop filled with wooden planks and soft morning light. The setting is rustic yet professional, suggesting high-quality craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkcKHcJisW-vU2utnVVM1nVA6r-xCdA2IRKCfztFEjq5dBNkJ2jjbcglUrSZEMth8OQ3c00DaCRxv971CT_WRbQhqZYStx-qie3L5L0yL-Sp-cTGEk-GmD7FSi4tM1fCNHK4AM18r-w0MyVlG-sLQiRKUwzpRGP4xkgrgyoIkkGSzeX6pmA845mN86S8ZLWXfNQO98nuZuBJDe2WRiqpufwz1c3lJePWZdSxkySjrS90_znsmlqkdurqFd05-Y3eabKBAdQrLW2pc"/>
+<div>
+<h3 class="font-label-md text-on-background">David Chen</h3>
+<p class="text-on-surface-variant text-body-sm">Master Carpenter</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+<span class="text-[12px] text-outline">2.4 miles away</span>
+</div>
+</div>
+</div>
+<div class="flex-grow">
+<p class="text-body-sm text-on-surface-variant line-clamp-2">Expert in structural repair and sustainable wood sourcing. Can advise on patio builds and structural safety.</p>
+</div>
+<button class="mt-4 w-full border border-primary text-primary py-2.5 rounded-xl font-label-md hover:bg-primary/5 transition-colors">Ask for Advice</button>
+</div>
+<!-- Expert Card 3 (Standard) -->
+<div class="md:col-span-4 bg-white border border-slate-100 rounded-3xl p-md custom-shadow flex flex-col h-full group hover:translate-y-[-4px] transition-all">
+<div class="flex items-center gap-md mb-4">
+<img class="w-16 h-16 rounded-2xl object-cover" data-alt="A woman in professional business attire, sitting in a modern law office with leather-bound books in the background. The lighting is soft and focused, creating an atmosphere of trust and high-level legal expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNfEYzvc9aw7ipbyvoFvW9Dfgyb_-0wrXew941juvdQgkF9pSJRn3fdrgHMXSuoHsP65PzNPR-rVuePSa76nqd6-EnVhI2QOnN9cZRVa_n0t_F_1eXtctzErH6USfARu1Kl2Gmq3du77rCYE4p3rNPyV5w7FcJ14do3LB1TImDghGaV3whaqchprdRha0j9v9t6tyIFNY2VcJZsLixpPIrW_PBIS-AursTlZgtfhrfHwr0SjZTgDJucq1xNugGVBVIIKcHQ01g63A"/>
+<div>
+<h3 class="font-label-md text-on-background">Elena Rodriguez</h3>
+<p class="text-on-surface-variant text-body-sm">Environmental Law</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+<span class="text-[12px] text-outline">1.1 miles away</span>
+</div>
+</div>
+</div>
+<div class="flex-grow">
+<p class="text-body-sm text-on-surface-variant line-clamp-2">Helps communities understand water rights and local environmental compliance for urban farming initiatives.</p>
+</div>
+<button class="mt-4 w-full border border-primary text-primary py-2.5 rounded-xl font-label-md hover:bg-primary/5 transition-colors">Ask for Advice</button>
+</div>
+<!-- Expert Card 4 (Standard) -->
+<div class="md:col-span-4 bg-white border border-slate-100 rounded-3xl p-md custom-shadow flex flex-col h-full group hover:translate-y-[-4px] transition-all">
+<div class="flex items-center gap-md mb-4">
+<img class="w-16 h-16 rounded-2xl object-cover" data-alt="A professional woman with glasses and an organized workspace in the background. She is looking directly at the camera with a confident, helpful expression. The style is bright, clean, and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyCdm72nJFHQXmqg2kKG9zhzbWckzX9grAbgGFTiq-EG73oQ0S_z5J2irLBEtD68pnxRMlwsVB0yLZ95J8C9n_YThhC0ReYsroUKU0PenYTVqFFyYamr18MG5DZByQEQVRfjbOmqIrJ09uAVhnva03cOXVpKNkDJC4ioKEJuNU3cN6i0_y9xR3Hk9owHlr-kiLPjSBQ6ps18DIbOcDoWQNfnahACsDc4nvzJhMx9WdG0RPGvBNgqByGSRcyHm6_widksnwCgf1xSA"/>
+<div>
+<h3 class="font-label-md text-on-background">Sarah Jenkins</h3>
+<p class="text-on-surface-variant text-body-sm">Social Worker</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+<span class="text-[12px] text-outline">0.8 miles away</span>
+</div>
+</div>
+</div>
+<div class="flex-grow">
+<p class="text-body-sm text-on-surface-variant line-clamp-2">Specializing in community mental health resources and youth program development. Available for local workshop planning.</p>
+</div>
+<button class="mt-4 w-full border border-primary text-primary py-2.5 rounded-xl font-label-md hover:bg-primary/5 transition-colors">Ask for Advice</button>
+</div>
+</div>
+<!-- Become an Expert Section -->
+<section class="mt-xxl bg-surface-container rounded-[40px] p-xl flex flex-col md:flex-row items-center gap-xl">
+<div class="md:w-1/2">
+<h2 class="font-headline-lg text-on-background mb-4">Got skills to share?</h2>
+<p class="text-body-md text-on-surface-variant mb-8">Join our network of local experts and help your neighborhood solve problems more effectively. You decide how much time you give.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary py-3 px-8 rounded-xl font-label-md hover:shadow-lg transition-shadow">Apply as an Expert</button>
+<button class="bg-white border border-outline-variant py-3 px-8 rounded-xl font-label-md text-on-surface-variant hover:bg-surface-bright transition-colors">Learn More</button>
+</div>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-weight="fill">verified_user</span>
+<span class="font-label-sm">Secure Identity</span>
+</div>
+<div class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary" data-weight="fill">volunteer_activism</span>
+<span class="font-label-sm">Community Impact</span>
+</div>
+</div>
+<div class="pt-8 space-y-4">
+<div class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">schedule</span>
+<span class="font-label-sm">Your Schedule</span>
+</div>
+<div class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-weight="fill">handshake</span>
+<span class="font-label-sm">Networking</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 max-w-[1280px] mx-auto px-6 gap-4">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-bold text-slate-900 dark:text-white">Kindred</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500">© 2024 Kindred. Built for community intelligence.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 transition-opacity hover:opacity-80 hover:text-[#2D62ED] underline decoration-2 underline-offset-4" href="#">Privacy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 transition-opacity hover:opacity-80 hover:text-[#2D62ED] underline decoration-2 underline-offset-4" href="#">Terms</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 transition-opacity hover:opacity-80 hover:text-[#2D62ED] underline decoration-2 underline-offset-4" href="#">Community Guidelines</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-slate-500 dark:text-slate-500 transition-opacity hover:opacity-80 hover:text-[#2D62ED] underline decoration-2 underline-offset-4" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -25,11 +25,11 @@ export default function PostProblem() {
   const prevStep = () => setStep(s => Math.max(s - 1, 1));
 
   return (
-    <div className="bg-background min-h-screen py-10 px-6">
+    <div className="bg-background min-h-screen pt-10 pb-24 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         {/* Left Information Sidebar */}
-        <aside className="lg:col-span-4 space-y-12">
+        <aside className="lg:col-span-4 space-y-12 sticky top-24 self-start">
           <div className="space-y-6">
              <div className="w-16 h-16 rounded-[24px] bg-primary-container/10 flex items-center justify-center text-primary-container shadow-sm border border-primary-container/20">
                 <Sparkles size={32} />
