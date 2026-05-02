@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const location = useLocation();
@@ -41,9 +41,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
-          <button className="text-slate-600 hover:text-[#2D62ED] p-2 rounded-full hover:bg-slate-50 transition-all">
-            <Search className="w-5 h-5" />
-          </button>
+
           <button className="hidden sm:block bg-[#2D62ED] text-white px-6 py-2 rounded-full font-semibold active:scale-95 transition-all shadow-md shadow-[#2D62ED]/20 text-sm">
             Sign In
           </button>
