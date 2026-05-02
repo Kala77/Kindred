@@ -33,9 +33,9 @@ export default function Impact() {
   ];
 
   const recentWins = [
-    { title: 'Community Garden Bloom', user: '@green_thumb', time: '2h ago' },
-    { title: 'New Bike Lane Advocacy', user: '@cycle_path', time: '5h ago' },
-    { title: 'Local Library Revamp', user: '@book_worm', time: '1d ago' },
+    { title: 'Community Garden Bloom', user: '@green_thumb', time: '2h ago', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAUaD743aXN-T0_2-p4v06S5c26qjO5p3c0D91176Q-o0pQkXl5w7bZgL8_P6aP5k_3qA3gD2tH1E8_zT4b1R4pT2p1hM8pXwX-6_uB8p7oU9r2k8sH7GjH5xL8oP0qH1e1t0D8t7yJ1_oN4yY7b5W2nZ-1oR6yK4xY8hW_0P6_4K7zC3vY_7L-uX3qT7aT3_wG6dM-yL4fJ3e0bA8uA0dI7bN9uV1yX6wN8y' },
+    { title: 'New Bike Lane Advocacy', user: '@cycle_path', time: '5h ago', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJGg4wJbS3yQ5nE0R8kL9sM2wF4rT7pA1yH6lK3nU8hD5tP9gT3kR0jQ7qT4yY2tM6jP4kR7hM9xN1tF2pL7gU0tA4yP8rJ3nR5tK9qN2wM0yJ5zV7qL4wH6wX3pM1tD7wT5tR8gE1wX5nF9tD4kN7vM9sE5tC6wV5hG8tD5qN2tC4tA5yM1zR2xU4wT7bL2wV4_pE7aV9bZ2pE8sF5fN9zW4yL3qQ1tD4wR2' },
+    { title: 'Local Library Revamp', user: '@book_worm', time: '1d ago', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHg8AyVpQ6yE2nT4qM5jP7kH0wT9yR8uC4bN2pA5hM7qX3nR6yL1wT4vJ8kR7wM9yF1uB6sP4zQ3tR5tM9oQ2yJ1vH7yK8zW4wD5jN2qV9yL3pM8sK5zU2uD6xP9tR4tY7zL8xM5wN6sJ1_qH7eD4rC6zY2xQ8hG5uH3tD7fG8sC3tG8sP4_A5rE3wV2bV1wE3hA5gQ9fS5sS1yM1tF6sM3yS8' },
   ];
 
   return (
@@ -145,7 +145,9 @@ export default function Impact() {
               <div className="flex flex-col gap-4">
                  {recentWins.map((win, i) => (
                    <div key={win.title} className="flex items-center gap-4 p-4 rounded-2xl hover:bg-surface-container transition-colors border border-transparent hover:border-outline-variant/10">
-                      <div className="w-10 h-10 rounded-full bg-slate-200 shrink-0"></div>
+                      <div className="w-10 h-10 rounded-full bg-slate-200 shrink-0 overflow-hidden">
+                         <img src={win.image} className="w-full h-full object-cover" alt="" />
+                      </div>
                       <div className="flex-1 min-w-0">
                          <div className="text-sm font-bold text-on-surface truncate">{win.title}</div>
                          <div className="text-[10px] font-medium text-on-surface-variant">{win.user}</div>
@@ -178,14 +180,17 @@ export default function Impact() {
               </div>
            </div>
            
-           <div className="flex-1 relative aspect-video w-full max-w-lg bg-white/5 rounded-[32px] overflow-hidden flex items-center justify-center border border-white/10">
-              <Globe size={180} className="text-white/5 absolute -right-20 -bottom-20 scale-150" />
-              <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">Visualizing Network Nodes...</div>
+           <div className="flex-1 relative aspect-video w-full max-w-lg rounded-[32px] overflow-hidden flex items-center justify-center border border-white/10 group cursor-pointer">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4xU1ZpT7yL8nR2sH5jQ9uV4qT8tR1uN4sN3mP7jH2yQ9yX1tR5zR4wM9oQ7yC3_xQ4tH5wM8sQ3tS7yK3wR7pC6vF5zP8qK9oP6tX9xX1uL4wD8sM2sV6yW9vD7yL3xR7zM5wQ1vD9yT1tE8_yT6zG3yV8xA1hC6sE8sC9tA4fT2yT1_wL3uN5zY8bK1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="" />
+              <div className="absolute inset-0 bg-gradient-to-t from-on-surface to-transparent pointer-events-none"></div>
               
               {/* Simulated Map Pins */}
-              <div className="absolute top-1/4 left-1/3 w-2 h-2 rounded-full bg-primary-container animate-ping"></div>
-              <div className="absolute top-1/2 left-2/3 w-2 h-2 rounded-full bg-tertiary-container animate-pulse shadow-[0_0_20px_rgba(181,79,0,0.5)]"></div>
-              <div className="absolute top-2/3 left-1/4 w-2 h-2 rounded-full bg-secondary-container"></div>
+              <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-primary-container animate-ping"></div>
+              <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-primary-container"></div>
+              
+              <div className="absolute top-1/2 left-2/3 w-4 h-4 rounded-full bg-tertiary-container animate-pulse shadow-[0_0_20px_rgba(181,79,0,0.5)]"></div>
+              
+              <div className="absolute top-2/3 left-1/4 w-3 h-3 rounded-full bg-secondary-container"></div>
            </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const EXPERTS = [
     bio: 'Helping neighborhoods transition to community-owned solar microgrids.',
     location: 'Oakland, CA',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBppGKMQE0XP9UQhBvMAifRYMKf45gt918sO__bqvps-838T518tAzbu-rVHZMvX1FTHe9f4cygk-f8G9R9BvlelunYmmpVp7_7kfzAoOBU65Kv1LinA0uTnip9FUE9HBSBUxICD9juRZpTCM_bNuNC7EXTSGWOO1i_3B8c_bEmNqJN2fdhd-_1A0KkRGNLRpomoYOkfhDEI5JHVqfoiT-sP4mG5Bvi6LOXDEueNdjp-n3verrsYNvuyYmdZbvz2Zf5I64HzDc96Vs',
   },
   {
     name: 'Elena Rodriguez',
@@ -20,7 +20,7 @@ const EXPERTS = [
     bio: 'Specializing in tenant rights and community land trust structures.',
     location: 'San Francisco, CA',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNfEYzvc9aw7ipbyvoFvW9Dfgyb_-0wrXew941juvdQgkF9pSJRn3fdrgHMXSuoHsP65PzNPR-rVuePSa76nqd6-EnVhI2QOnN9cZRVa_n0t_F_1eXtctzErH6USfARu1Kl2Gmq3du77rCYE4p3rNPyV5w7FcJ14do3LB1TImDghGaV3whaqchprdRha0j9v9t6tyIFNY2VcJZsLixpPIrW_PBIS-AursTlZgtfhrfHwr0SjZTgDJucq1xNugGVBVIIKcHQ01g63A',
   },
   {
     name: 'Sarah Jenkins',
@@ -28,7 +28,15 @@ const EXPERTS = [
     bio: 'Urban gardening consultant for drought-resistant public spaces.',
     location: 'San Jose, CA',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAyCdm72nJFHQXmqg2kKG9zhzbWckzX9grAbgGFTiq-EG73oQ0S_z5J2irLBEtD68pnxRMlwsVB0yLZ95J8C9n_YThhC0ReYsroUKU0PenYTVqFFyYamr18MG5DZByQEQVRfjbOmqIrJ09uAVhnva03cOXVpKNkDJC4ioKEJuNU3cN6i0_y9xR3Hk9owHlr-kiLPjSBQ6ps18DIbOcDoWQNfnahACsDc4nvzJhMx9WdG0RPGvBNgqByGSRcyHm6_widksnwCgf1xSA',
+  },
+  {
+    name: 'Thomas Builder',
+    role: 'Master Carpenter',
+    bio: 'Guiding communities in building accessible park infrastructure.',
+    location: 'Berkeley, CA',
+    rating: 4.9,
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAkcKHcJisW-vU2utnVVM1nVA6r-xCdA2IRKCfztFEjq5dBNkJ2jjbcglUrSZEMth8OQ3c00DaCRxv971CT_WRbQhqZYStx-qie3L5L0yL-Sp-cTGEk-GmD7FSi4tM1fCNHK4AM18r-w0MyVlG-sLQiRKUwzpRGP4xkgrgyoIkkGSzeX6pmA845mN86S8ZLWXfNQO98nuZuBJDe2WRiqpufwz1c3lJePWZdSxkySjrS90_znsmlqkdurqFd05-Y3eabKBAdQrLW2pc',
   },
 ];
 
@@ -81,7 +89,7 @@ export default function Experts() {
            >
               <div className="w-full md:w-64 h-64 shrink-0 rounded-3xl overflow-hidden relative">
                  <img 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPK5wJbS9wHCq-VSaHyvw_UaOQ3zWHII3TIG89e94KCsv3nnQ6hHhPnvKyKKCs8mrUVkm9QVZuILWqWRvmD6_1x-QfuHEjJ_j58WMlNLQ1RkYfMlaT0_txMAVbfFDJIHURLRSf3SYBSRU0za9ye9Y1MSLLJuHptgEXoy_wk6XDUimhYoYATt2CsyFTe_urSytwuiqGkMLQbfc7kkT4_iJxibiUDic7Fqc5T9QreKFFaNG77sYRA9M_O0UWjhvQQ2ZdKuc6Bmi4tqQ" 
                   className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-700" 
                   alt="" 
                  />

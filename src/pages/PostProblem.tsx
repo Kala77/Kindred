@@ -147,6 +147,11 @@ export default function PostProblem() {
                            </div>
                            <div className="btn-gradient text-on-primary px-8 py-3 rounded-xl font-bold font-display text-xs shadow-lg mt-4">Browse Local Files</div>
                         </div>
+                        <div className="grid grid-cols-3 gap-4 mt-4">
+                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPCfFsZpDkQzIq3vA4Jv8jL7eO5rBq9pE2zC3bV5cO4lZ2wK1oA5mX2nG9iF8qL1uA7wS0dJ5kM4fS8aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Aerial view community garden" />
+                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU35j0rD7tP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Collaborative workspace" />
+                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9RLuKyN7mQ6lE9uA2Jw7sD3vP8kG5pC8zX9mQ4dK1rM6oW2yB1uF7wX6nT4yD2kE8fS0aL6hM4fS8aH3uC1wD5zP8hV5xV4tC8rC5tJ1" className="w-full h-24 rounded-2xl object-cover shadow-sm border border-outline-variant/20" alt="Town hall" />
+                        </div>
                      </div>
                      <div className="space-y-4">
                         <h2 className="text-xl font-bold font-display">Location</h2>

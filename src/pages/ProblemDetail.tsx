@@ -69,8 +69,8 @@ export default function ProblemDetail() {
                  {/* Problem Description */}
                  <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                       <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop" className="rounded-3xl h-64 w-full object-cover shadow-md" alt="" />
-                       <img src="https://images.unsplash.com/photo-1519003300449-424ad017505b?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl h-64 w-full object-cover shadow-md" alt="" />
+                       <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6XMYBmcbX5ww53iekdH9xLADt6ti3MjAurhCDz_wwoR0hnbTCE4mIZr9jEhFvNBEPKYvkmV1cfEbKRvkJk2tBqbhhYXEsDmtpx_q-7rK4s8B13xURvYVgZO90YJ5CABPstAxnTkkUIMQx4QfElRSLjiM9dlE1FHeyYwa1HefJaVF7nt8hqSKILBi-TPxBvwyu_yI-QrmlrILXjBigoWVNCtPvHFKmeaa_qvYVya4o83MogtfRb6aVFv72egGwn0VvzHg_4tnTWtU" className="rounded-3xl h-64 w-full object-cover shadow-md" alt="" />
+                       <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoJboW5Bwf9ZRhR1emAgQxcZ6E-Xn_6pgfO6gB-iH77u5rD5X7dA_j1_hcTYURJ1cOkTCKOmYrSSSlDf2mzyEjcCBmwH01wYQFTuc7Zd0Il3QDfUtJPzFUA5cUdVA_hMuL8zrUD5SuAaCF2-3mY07_-wC24KZfSOmwYVdM6J69JdlWRoTBhZO_j8YGztiqKUExMu1wyWf9XfeV7akbNzDaoop54r9gRaL_ixZCsSBCJGq53N8w58yaJVdZ9x-ebd1ue3zA_XBfMv4" className="rounded-3xl h-64 w-full object-cover shadow-md" alt="" />
                     </div>
                     <p className="text-lg text-on-surface-variant leading-relaxed font-medium">
                        The intersection at Elm and 5th has seen a 20% increase in near-misses 
@@ -134,7 +134,7 @@ export default function ProblemDetail() {
                             )}
                             <div className="flex gap-4 items-start mb-6">
                                <div className="w-12 h-12 rounded-2xl bg-slate-200 overflow-hidden border-2 border-surface-container shadow-sm">
-                                  <img src={`https://i.pravatar.cc/100?u=${sol.author}`} alt="" />
+                                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUexFgPsifhydXAl73htRnzrDdqZqZ3PeBed386w6BJGExNCOGoUaK1vQiLaLRLQefoskxW6FS3mUQ8ExYTrXdYdvBI7T3V98D8FSt__kZypsL2qULZNrLC612zTBK4f2MF79QzoSyNz4eP1YBkWs9rJSvFYjCFhZg0HSk3iCBNXew5YPM-FB_Dl3jeIhhjXzJuWy-4UicHKTQBLXuzu5gqtJ0_CL_pPC97rvglb1T4Zyy6EzJqqRe7G2ht6I0SeTFSg9KwL_6EA" className="w-full h-full object-cover" alt="" />
                                </div>
                                <div>
                                   <div className="font-bold text-on-surface flex items-center gap-1">
@@ -178,7 +178,7 @@ export default function ProblemDetail() {
               <h3 className="text-xs font-black uppercase tracking-widest text-on-surface-variant">Lead Solver</h3>
               <div className="flex items-center gap-4">
                  <div className="w-16 h-16 rounded-[24px] bg-slate-200 ring-4 ring-surface-container-low overflow-hidden">
-                    <img src="https://i.pravatar.cc/150?u=david" className="w-full h-full object-cover" alt="" />
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUexFgPsifhydXAl73htRnzrDdqZqZ3PeBed386w6BJGExNCOGoUaK1vQiLaLRLQefoskxW6FS3mUQ8ExYTrXdYdvBI7T3V98D8FSt__kZypsL2qULZNrLC612zTBK4f2MF79QzoSyNz4eP1YBkWs9rJSvFYjCFhZg0HSk3iCBNXew5YPM-FB_Dl3jeIhhjXzJuWy-4UicHKTQBLXuzu5gqtJ0_CL_pPC97rvglb1T4Zyy6EzJqqRe7G2ht6I0SeTFSg9KwL_6EA" className="w-full h-full object-cover" alt="" />
                  </div>
                  <div>
                     <h4 className="text-xl font-bold font-display text-on-surface">David Chen</h4>
